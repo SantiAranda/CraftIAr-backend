@@ -11,31 +11,46 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         self.stdout.write("Iniciando la carga de datos de prueba...")
 
+        # Limpiar registros previos para evitar conflictos de códigos antiguos
+        PermissionAtom.objects.all().delete()
+        Profile.objects.all().delete()
+
         # ----------------------------------------------------
         # 1. Crear Permisos Atómicos
         # ----------------------------------------------------
         permissions_data = [
-            # Módulo Seguridad / Administración
-            ('users:ver:todos', 'users', 'Ver listado de todos los usuarios'),
-            ('users:modificar_perfiles', 'users', 'Asignar o revocar perfiles a usuarios'),
-            ('profiles:gestionar', 'users', 'Configurar permisos de perfiles dinámicos'),
-            ('audit:ver', 'users', 'Ver logs de auditoría de seguridad'),
+            # Catálogo
+            ('catalogo.crear_producto', 'catalog', 'Crear nuevos productos'),
+            ('catalogo.editar_producto', 'catalog', 'Editar productos existentes'),
+            ('catalogo.eliminar_producto', 'catalog', 'Eliminar productos'),
+            ('catalogo.gestionar_stock', 'catalog', 'Modificar stock disponible'),
+            ('catalogo.ver_catalogo', 'catalog', 'Ver el catálogo navegable'),
             
-            # Módulo Catálogo
-            ('catalog:crear', 'catalog', 'Crear y modificar productos del catálogo'),
+            # Pedidos
+            ('pedidos.ver_propios', 'orders', 'Ver solo sus propios pedidos recibidos'),
+            ('pedidos.ver_todos', 'orders', 'Ver todos los pedidos del sistema'),
+            ('pedidos.cambiar_estado', 'orders', 'Cambiar estado de un pedido'),
             
-            # Módulo Pedidos
-            ('orders:ver_todos', 'orders', 'Ver pedidos de todos los usuarios'),
-            ('orders:gestionar_estado', 'orders', 'Actualizar el estado de los pedidos'),
+            # Carrito
+            ('carrito.gestionar', 'cart', 'Agregar, editar y eliminar del carrito'),
+            ('carrito.checkout', 'cart', 'Confirmar pedidos'),
             
-            # Módulo Tutor Visual IA
-            ('tutor:acceso', 'tutor', 'Acceso para consultar al Tutor Visual IA'),
+            # Tutor IA
+            ('tutor.acceder', 'tutor', 'Acceder al Tutor Visual IA'),
+            ('tutor.ver_historial', 'tutor', 'Ver historial de proyectos'),
             
-            # Módulo Marketing / Banners y Promociones
-            ('banners:ver:todos', 'banners', 'Ver banners publicitarios'),
-            ('banners:crear:todos', 'banners', 'Crear nuevos banners publicitarios'),
-            ('banners:eliminar:todos', 'banners', 'Eliminar banners publicitarios'),
-            ('promociones:gestionar', 'promociones', 'Crear cupones y descuentos'),
+            # Gestión Interna
+            ('gestion.ver_dashboard', 'gestion', 'Ver métricas y reportes de ventas'),
+            ('gestion.exportar_reportes', 'gestion', 'Exportar reportes de pedidos/stock'),
+            ('gestion.gestionar_banners', 'gestion', 'Crear y ordenar banners del home'),
+            ('gestion.gestionar_promociones', 'gestion', 'Crear cupones y descuentos'),
+            
+            # Administración
+            ('admin.gestionar_usuarios', 'admin', 'Crear, editar, activar/desactivar usuarios'),
+            ('admin.asignar_perfiles', 'admin', 'Asignar/revocar perfiles a usuarios'),
+            ('admin.configurar_perfiles', 'admin', 'Crear y configurar perfiles'),
+            ('admin.ver_auditoria', 'admin', 'Ver log de auditoría'),
+            ('admin.configuracion_general', 'admin', 'Modificar parámetros globales del sistema'),
         ]
 
         permission_atoms = {}
@@ -56,55 +71,25 @@ class Command(BaseCommand):
             name="Comprar en la tienda",
             defaults={'description': 'Perfil base para compras ordinarias en la tienda.'}
         )
-
-        # Perfil 2: Tutor Visual IA (Premium)
-        premium_profile, _ = Profile.objects.get_or_create(
-            name="Tutor Visual IA",
-            defaults={'description': 'Habilita el uso del Tutor Visual con Inteligencia Artificial.'}
-        )
-        # Asignar permiso tutor
         ProfilePermission.objects.get_or_create(
-            profile=premium_profile,
-            permission=permission_atoms['tutor:acceso'],
-            defaults={'scope': 'propios'}
-        )
-
-        # Perfil 3: Pasante de Marketing (Ejemplo con vencimiento en requisitos)
-        marketing_profile, _ = Profile.objects.get_or_create(
-            name="Pasante de Marketing",
-            defaults={'description': 'Gestión de banners y promociones.'}
-        )
-        # Asignar permisos banners (ver y crear, sin eliminar)
-        ProfilePermission.objects.get_or_create(
-            profile=marketing_profile,
-            permission=permission_atoms['banners:ver:todos'],
-            defaults={'scope': 'todos'}
-        )
-        ProfilePermission.objects.get_or_create(
-            profile=marketing_profile,
-            permission=permission_atoms['banners:crear:todos'],
-            defaults={'scope': 'todos'}
-        )
-
-        # Perfil 4: Vendedor / Proveedor
-        vendor_profile, _ = Profile.objects.get_or_create(
-            name="Vendedor/Proveedor",
-            defaults={'description': 'Administración del catálogo y procesamiento de pedidos.'}
-        )
-        ProfilePermission.objects.get_or_create(
-            profile=vendor_profile,
-            permission=permission_atoms['catalog:crear'],
+            profile=client_profile,
+            permission=permission_atoms['carrito.gestionar'],
             defaults={'scope': 'propios'}
         )
         ProfilePermission.objects.get_or_create(
-            profile=vendor_profile,
-            permission=permission_atoms['orders:ver_todos'],
-            defaults={'scope': 'todos'}
+            profile=client_profile,
+            permission=permission_atoms['carrito.checkout'],
+            defaults={'scope': 'propios'}
         )
         ProfilePermission.objects.get_or_create(
-            profile=vendor_profile,
-            permission=permission_atoms['orders:gestionar_estado'],
-            defaults={'scope': 'todos'}
+            profile=client_profile,
+            permission=permission_atoms['catalogo.ver_catalogo'],
+            defaults={'scope': 'propios'}
+        )
+        ProfilePermission.objects.get_or_create(
+            profile=client_profile,
+            permission=permission_atoms['pedidos.ver_propios'],
+            defaults={'scope': 'propios'}
         )
 
         # Perfil 5: Administrador General

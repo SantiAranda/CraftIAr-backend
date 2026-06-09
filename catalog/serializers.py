@@ -16,11 +16,13 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(source='category.name', read_only=True)
+    created_by_username = serializers.CharField(source='created_by.username', read_only=True)
 
     class Meta:
         model = Product
         fields = (
             'id', 'sku', 'name', 'description', 'price', 'stock', 
             'weight_kg', 'image_url', 'category', 'category_name', 
-            'technical_pdf_url'
+            'technical_pdf_url', 'created_by', 'created_by_username'
         )
+        read_only_fields = ('created_by',)

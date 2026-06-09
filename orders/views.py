@@ -13,25 +13,53 @@ from .tasks import send_order_status_change_email
 class OrderViewSet(viewsets.ModelViewSet):
     """
     Gestión de pedidos:
-    - Autenticado: Listar sus propios pedidos (alcance 'propios').
-    - Vendedor/Admin (permiso 'orders:ver_todos'): Listar todos los pedidos (alcance 'todos') (RF 1.4, 4.3).
-    - Checkout (POST): Crear pedidos con validación de stock (RF 4.2).
+    - Autenticado: Listar sus propios pedidos o ventas (alcance 'propios') (RF 1.4, 4.3).
+    - Vendedor/Admin (permiso 'pedidos.ver_todos'): Listar todos los pedidos (alcance 'todos').
+    - Checkout (POST): Crear pedidos con validación de stock y permiso 'carrito.checkout'.
     """
-    permission_classes = [IsAuthenticated]
-
     def get_serializer_class(self):
         if self.action == 'create':
             return OrderCreateSerializer
         return OrderSerializer
 
+    def get_permissions(self):
+        if self.action == 'create':
+            self.required_permission = 'carrito.checkout'
+            self.required_scope = 'propios'
+            return [HasDynamicPermission()]
+        elif self.action == 'update_status':
+            self.required_permission = 'pedidos.cambiar_estado'
+            self.required_scope = 'propios'
+            return [HasDynamicPermission()]
+        elif self.action in ['list', 'retrieve']:
+            # El usuario debe poseer al menos pedidos.ver_propios o pedidos.ver_todos
+            if has_custom_permission(self.request.user, 'pedidos.ver_todos', 'propios'):
+                self.required_permission = 'pedidos.ver_todos'
+            else:
+                self.required_permission = 'pedidos.ver_propios'
+            self.required_scope = 'propios'
+            return [HasDynamicPermission()]
+        
+        return [IsAuthenticated()]
+
     def get_queryset(self):
         user = self.request.user
+        if not user.is_authenticated:
+            return Order.objects.none()
         
-        # Verificar si el usuario tiene permiso para ver todos los pedidos del sistema
-        if has_custom_permission(user, 'orders:ver_todos', required_scope='todos'):
+        # Verificar si el usuario tiene permiso para ver todos los pedidos
+        if has_custom_permission(user, 'pedidos.ver_todos', required_scope='todos'):
             return Order.objects.all().order_by('-created_at')
             
-        # Por defecto, solo ve sus propios pedidos
+        # Si tiene permisos para ver propios (o ver todos con alcance propio)
+        if has_custom_permission(user, 'pedidos.ver_propios', required_scope='propios') or has_custom_permission(user, 'pedidos.ver_todos', required_scope='propios'):
+            from django.db.models import Q
+            # Pedidos creados por él o pedidos con productos creados por él
+            return Order.objects.filter(
+                Q(user=user) | Q(items__product__created_by=user)
+            ).distinct().order_by('-created_at')
+
+        # Por defecto, el comprador sólo ve sus propias compras
         return Order.objects.filter(user=user).order_by('-created_at')
 
     def create(self, request, *args, **kwargs):
@@ -46,12 +74,11 @@ class OrderViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['post'], permission_classes=[HasDynamicPermission])
     def update_status(self, request, pk=None):
         """
-        RF 4.2 y RF 7.3: Permite a un vendedor cambiar el estado de un pedido (ej. Enviado, Entregado)
-        disparando el email de notificación correspondiente de forma asíncrona.
-        Requiere el permiso dinámico 'orders:gestionar_estado'.
+        RF 4.2 y RF 7.3: Permite cambiar el estado de un pedido.
+        Requiere el permiso dinámico 'pedidos.cambiar_estado'.
         """
-        self.required_permission = 'orders:gestionar_estado'
-        self.required_scope = 'todos'
+        self.required_permission = 'pedidos.cambiar_estado'
+        self.required_scope = 'propios'
         
         order = self.get_object()
         new_status = request.data.get('status')

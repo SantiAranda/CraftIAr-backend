@@ -3,20 +3,6 @@ from django.contrib.auth.models import User
 from .models import PermissionAtom, Profile, ProfilePermission, UserProfileAssignment, PermissionAuditLog
 from .permissions import get_user_active_permissions
 
-class UserSerializer(serializers.ModelSerializer):
-    """
-    Serializador para detalles de usuario, incluyendo sus permisos consolidados activos.
-    """
-    active_permissions = serializers.SerializerMethodField()
-
-    class Meta:
-        model = User
-        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'active_permissions')
-
-    def get_active_permissions(self, obj):
-        return get_user_active_permissions(obj)
-
-
 class RegisterSerializer(serializers.ModelSerializer):
     """
     Serializador para el registro de nuevos usuarios.
@@ -70,6 +56,21 @@ class UserProfileAssignmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfileAssignment
         fields = ('id', 'profile', 'profile_name', 'assigned_at', 'assigned_by', 'assigned_by_name', 'expires_at', 'is_active', 'has_expired')
+
+
+class UserSerializer(serializers.ModelSerializer):
+    """
+    Serializador para detalles de usuario, incluyendo sus permisos consolidados activos.
+    """
+    active_permissions = serializers.SerializerMethodField()
+    assignments = UserProfileAssignmentSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'is_superuser', 'active_permissions', 'assignments')
+
+    def get_active_permissions(self, obj):
+        return get_user_active_permissions(obj)
 
 
 class PermissionAuditLogSerializer(serializers.ModelSerializer):

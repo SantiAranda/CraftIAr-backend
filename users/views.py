@@ -5,6 +5,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.db.models import Q
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
@@ -83,26 +84,70 @@ class UserProfileView(APIView):
         return Response(serializer.data)
 
 
-class AdminUserListView(generics.ListAPIView):
+class AdminUserListView(generics.ListCreateAPIView):
     """
-    ABM Usuarios: Listado de usuarios del sistema.
-    Requiere permiso 'users:ver:todos'.
+    ABM Usuarios: Listado y creación de usuarios del sistema.
+    Requiere permiso 'admin.gestionar_usuarios'.
     """
     queryset = User.objects.all().order_by('id')
-    serializer_class = UserSerializer
     permission_classes = [HasDynamicPermission]
-    required_permission = 'users:ver:todos'
+    required_permission = 'admin.gestionar_usuarios'
     required_scope = 'todos'
+
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return RegisterSerializer
+        return UserSerializer
+
+    def perform_create(self, serializer):
+        user = serializer.save()
+        # Asignar perfiles seleccionados en la creación (RF 6.5)
+        profiles_data = self.request.data.get('profiles', [])
+        for item in profiles_data:
+            p_id = None
+            expires_at = None
+            if isinstance(item, dict):
+                p_id = item.get('id')
+                expires_at = item.get('expires_at')
+            else:
+                p_id = item
+            
+            if not p_id:
+                continue
+
+            try:
+                profile = Profile.objects.get(id=p_id)
+                assignment, created = UserProfileAssignment.objects.get_or_create(
+                    user=user,
+                    profile=profile,
+                    defaults={'assigned_by': self.request.user}
+                )
+                if not created:
+                    assignment.is_active = True
+                if expires_at:
+                    assignment.expires_at = expires_at
+                assignment.save()
+                
+                # Registrar Auditoría
+                PermissionAuditLog.objects.create(
+                    user=user,
+                    profile=profile,
+                    action='assign',
+                    performed_by=self.request.user,
+                    notes=f"Perfil asignado durante la creación de usuario interno. Vence: {expires_at or 'Permanente'}"
+                )
+            except Profile.DoesNotExist:
+                continue
 
 
 class AdminUserProfilesView(APIView):
     """
     Administración de perfiles por usuario.
     Permite ver y tildar/destildar perfiles desde el panel visual, registrando auditoría.
-    Requiere permiso 'users:modificar_perfiles'.
+    Requiere permiso 'admin.asignar_perfiles'.
     """
     permission_classes = [HasDynamicPermission]
-    required_permission = 'users:modificar_perfiles'
+    required_permission = 'admin.asignar_perfiles'
 
     def get(self, request, user_id):
         try:
@@ -174,12 +219,12 @@ class AdminProfileViewSet(viewsets.ModelViewSet):
     """
     ABM Perfiles: Creación y configuración dinámica de perfiles agrupando permisos (RF 1.2).
     Permite habilitar/deshabilitar permisos atómicos mediante checkboxes en tiempo real.
-    Requiere permiso 'profiles:gestionar'.
+    Requiere permiso 'admin.configurar_perfiles'.
     """
     queryset = Profile.objects.all().order_by('name')
     serializer_class = ProfileSerializer
     permission_classes = [HasDynamicPermission]
-    required_permission = 'profiles:gestionar'
+    required_permission = 'admin.configurar_perfiles'
     required_scope = 'todos'
 
     def perform_create(self, serializer):
@@ -189,6 +234,41 @@ class AdminProfileViewSet(viewsets.ModelViewSet):
     def perform_update(self, serializer):
         profile = serializer.save()
         self._update_permissions(profile, self.request.data.get('permissions', []))
+
+    def update(self, request, *args, **kwargs):
+        profile = self.get_object()
+        # RN 3: El perfil "Administrador del Sistema" es inmutable
+        if profile.name == "Administrador del Sistema":
+            return Response(
+                {"error": "El perfil 'Administrador del Sistema' es del sistema y no se puede editar."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        return super().update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        profile = self.get_object()
+        # RN 3: El perfil "Administrador del Sistema" es inmutable
+        if profile.name == "Administrador del Sistema":
+            return Response(
+                {"error": "El perfil 'Administrador del Sistema' es del sistema y no se puede eliminar."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # RN 1: No se permite eliminar perfil asignado activamente a usuarios
+        now = timezone.now()
+        active_assignments = UserProfileAssignment.objects.filter(
+            profile=profile,
+            is_active=True
+        ).filter(
+            Q(expires_at__isnull=True) | Q(expires_at__gt=now)
+        )
+        if active_assignments.exists():
+            return Response(
+                {"error": "No se puede eliminar el perfil porque está asignado a usuarios activos."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        return super().destroy(request, *args, **kwargs)
 
     def _update_permissions(self, profile, permissions_data):
         # Limpiar permisos previos del perfil
@@ -226,7 +306,7 @@ class PermissionAuditLogListView(generics.ListAPIView):
     queryset = PermissionAuditLog.objects.all().order_by('-timestamp')
     serializer_class = PermissionAuditLogSerializer
     permission_classes = [HasDynamicPermission]
-    required_permission = 'audit:ver'
+    required_permission = 'admin.ver_auditoria'
     required_scope = 'todos'
 
 

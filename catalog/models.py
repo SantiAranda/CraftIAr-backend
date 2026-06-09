@@ -46,6 +46,14 @@ class Product(models.Model):
         null=True, 
         help_text="Enlace a ficha técnica en PDF para el Tutor RAG"
     )
+    created_by = models.ForeignKey(
+        'auth.User',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='created_products',
+        help_text="Usuario que creó el producto"
+    )
     
     # Campo embedding de 384 dimensiones (HuggingFace all-MiniLM-L6-v2 o similar)
     try:

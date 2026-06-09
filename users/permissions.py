@@ -88,3 +88,42 @@ class HasDynamicPermission(permissions.BasePermission):
 
         required_scope = getattr(view, 'required_scope', 'propios')
         return has_custom_permission(request.user, required_permission, required_scope)
+
+    def has_object_permission(self, request, view, obj):
+        if not request.user or not request.user.is_authenticated:
+            return False
+
+        required_permission = getattr(view, 'required_permission', None)
+        if not required_permission:
+            return True
+
+        perms = get_user_active_permissions(request.user)
+        if "all" in perms:
+            return True
+
+        if required_permission not in perms:
+            return False
+
+        user_scope = perms[required_permission]
+        
+        # Si el alcance del usuario para este permiso es 'todos', entonces puede operar sobre cualquier objeto
+        if user_scope == 'todos':
+            return True
+
+        # Si el alcance es 'propios', debemos comprobar la propiedad del objeto
+        # Para Product (de la app catalog):
+        from catalog.models import Product
+        if isinstance(obj, Product):
+            return obj.created_by == request.user
+
+        # Para Order (de la app orders):
+        from orders.models import Order
+        if isinstance(obj, Order):
+            # El comprador ve su propio pedido
+            if obj.user == request.user:
+                return True
+            # El vendedor ve el pedido si contiene alguno de sus productos
+            has_vendor_product = obj.items.filter(product__created_by=request.user).exists()
+            return has_vendor_product
+
+        return False

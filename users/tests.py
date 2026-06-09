@@ -24,7 +24,7 @@ class AuthTestCase(APITestCase):
         
         # Crear permiso atómico
         self.perm_tutor = PermissionAtom.objects.create(
-            code="tutor:acceso",
+            code="tutor.acceder",
             module="tutor",
             description="Acceso tutor"
         )

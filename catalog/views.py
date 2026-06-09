@@ -18,7 +18,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     """
     ABM de Productos y Catálogo.
     - Lectura pública (GET) para permitir Server-Side Rendering (SSR) en Next.js.
-    - Escritura protegida por permisos dinámicos ('catalog:crear' / 'catalog:editar').
+    - Escritura protegida por permisos dinámicos y alcances (RF 1.4).
     """
     queryset = Product.objects.all().order_by('name')
     serializer_class = ProductSerializer
@@ -32,7 +32,23 @@ class ProductViewSet(viewsets.ModelViewSet):
         if self.action in ['list', 'retrieve']:
             return [AllowAny()]
         
-        # Operaciones de escritura (crear, modificar, borrar) requieren el permiso correspondiente
-        self.required_permission = 'catalog:crear'
+        # Determinar permiso requerido según la acción
+        if self.action == 'create':
+            self.required_permission = 'catalogo.crear_producto'
+        elif self.action in ['update', 'partial_update']:
+            # Si se actualiza sólo el stock, requerir catalogo.gestionar_stock, de lo contrario catalogo.editar_producto
+            if 'stock' in self.request.data and len(self.request.data) <= 2:
+                self.required_permission = 'catalogo.gestionar_stock'
+            else:
+                self.required_permission = 'catalogo.editar_producto'
+        elif self.action == 'destroy':
+            self.required_permission = 'catalogo.eliminar_producto'
+        else:
+            self.required_permission = 'catalogo.ver_catalogo'
+
         self.required_scope = 'propios'
         return [HasDynamicPermission()]
+
+    def perform_create(self, serializer):
+        # Guardar asociando el producto al usuario actual
+        serializer.save(created_by=self.request.user)
