@@ -155,7 +155,8 @@ CELERY_TASK_ALWAYS_EAGER = os.environ.get('CELERY_TASK_ALWAYS_EAGER', str(DEBUG)
 GOOGLE_OAUTH2_CLIENT_ID = os.environ.get('GOOGLE_OAUTH2_CLIENT_ID', '')
 GOOGLE_OAUTH2_CLIENT_SECRET = os.environ.get('GOOGLE_OAUTH2_CLIENT_SECRET', '')
 
-# Configuración de APIs externas para IA (Groq y Hugging Face)
+# Configuración de APIs externas para IA (Google Gemini, Groq y Hugging Face)
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', '')
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY', '')
 HUGGINGFACE_API_KEY = os.environ.get('HUGGINGFACE_API_KEY', '')
 

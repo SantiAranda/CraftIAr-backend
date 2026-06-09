@@ -33,6 +33,11 @@ class ChatMessageStreamView(APIView):
         charset = "utf-8"
 
         def render(self, data, media_type=None, renderer_context=None):
+            if isinstance(data, (dict, list)):
+                import json
+                return json.dumps(data).encode(self.charset)
+            if isinstance(data, str):
+                return data.encode(self.charset)
             return data
 
     renderer_classes = [ServerSentEventsRenderer]

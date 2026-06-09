@@ -81,7 +81,15 @@ class UserProfileView(APIView):
 
     def get(self, request):
         serializer = UserSerializer(request.user)
-        return Response(serializer.data)
+        data = serializer.data
+        
+        # Verificar si la clave de Google API está configurada en settings o el entorno
+        from django.conf import settings
+        import os
+        api_key = getattr(settings, "GOOGLE_API_KEY", "") or os.environ.get("GOOGLE_API_KEY", "")
+        data["google_api_key_configured"] = bool(api_key)
+        
+        return Response(data)
 
 
 class AdminUserListView(generics.ListCreateAPIView):

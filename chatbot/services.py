@@ -16,51 +16,64 @@ class RAGQueryService:
         session = ChatbotSession.objects.get(id=session_id)
         ChatbotMessage.objects.create(session=session, role="user", content=user_text)
 
-        # Configurar la conexión a la base de datos para PGVector de forma flexible
-        db_key = "rag" if "rag" in settings.DATABASES else "default"
-        db_settings = settings.DATABASES[db_key]
-        
-        if db_settings["ENGINE"] == "django.db.backends.sqlite3":
-            # Si usa SQLite (fallback de desarrollo), no soportará PGVector,
-            # por lo que lanzamos un error claro para el desarrollador.
-            raise ValueError(
-                "PGVector requiere una base de datos PostgreSQL con pgvector. "
-                "La base de datos configurada actualmente es SQLite. "
-                "Por favor, configure DATABASE_URL en su archivo .env con una base de datos compatible (ej: Supabase o Neon)."
-            )
-
-        password = quote_plus(db_settings["PASSWORD"])
-        # Construir la URL de conexión para SQLAlchemy/PGVector
-        VECTOR_DB_URL = f"postgresql://{db_settings['USER']}:{password}@{db_settings['HOST']}:{db_settings['PORT']}/{db_settings['NAME']}"
-
         # Usar la API Key de Google configurada en settings
         api_key = getattr(settings, "GOOGLE_API_KEY", "")
         if not api_key:
-            # Si no está definida en settings, buscamos en las variables de entorno directas o lanzamos error
             import os
             api_key = os.environ.get("GOOGLE_API_KEY", "")
             if not api_key:
                 raise ValueError("La variable GOOGLE_API_KEY no está configurada en sus variables de entorno o settings.py.")
 
-        embeddings = GoogleGenerativeAIEmbeddings(
-            model="gemini-embedding-2", api_key=api_key
-        )
+        # Configurar la conexión a la base de datos para PGVector de forma flexible
+        db_key = "rag" if "rag" in settings.DATABASES else "default"
+        db_settings = settings.DATABASES[db_key]
         
-        vector_store = PGVector(
-            embeddings=embeddings,
-            collection_name="product_embeddings",
-            connection=VECTOR_DB_URL,
-            use_jsonb=True,
-        )
+        contexto = ""
+        
+        if db_settings["ENGINE"] == "django.db.backends.sqlite3":
+            # Si usa SQLite (fallback de desarrollo), buscamos usando el ORM de Django tradicional
+            from django.db.models import Q
+            from catalog.models import Product
+            
+            words = user_text.split()
+            query = Q()
+            for word in words:
+                if len(word) > 2:
+                    query |= Q(name__icontains=word) | Q(description__icontains=word)
+            
+            if query:
+                products = Product.objects.filter(query)[:5]
+            else:
+                products = Product.objects.all()[:5]
+                
+            contexto = "\n\n".join([
+                f"Producto: {p.name}\nSKU: {p.sku}\nPrecio: {p.price}\nDescripción: {p.description}\nCategoría: {p.category.name if p.category else 'General'}"
+                for p in products
+            ])
+        else:
+            password = quote_plus(db_settings["PASSWORD"])
+            # Construir la URL de conexión para SQLAlchemy/PGVector
+            VECTOR_DB_URL = f"postgresql://{db_settings['USER']}:{password}@{db_settings['HOST']}:{db_settings['PORT']}/{db_settings['NAME']}"
 
-        # Realizar la búsqueda vectorial de similitud en PGVector
-        try:
-            retriever = vector_store.similarity_search(user_text, k=5)
-            contexto = "\n\n".join([doc.page_content for doc in retriever])
-        except Exception as e:
-            # Si pgvector o la colección no están inicializados aún, informamos o fallamos graciosamente
-            contexto = ""
-            print(f"Advertencia en búsqueda vectorial: {e}")
+            embeddings = GoogleGenerativeAIEmbeddings(
+                model="gemini-embedding-2", api_key=api_key
+            )
+            
+            vector_store = PGVector(
+                embeddings=embeddings,
+                collection_name="product_embeddings",
+                connection=VECTOR_DB_URL,
+                use_jsonb=True,
+            )
+
+            # Realizar la búsqueda vectorial de similitud en PGVector
+            try:
+                retriever = vector_store.similarity_search(user_text, k=5)
+                contexto = "\n\n".join([doc.page_content for doc in retriever])
+            except Exception as e:
+                # Si pgvector o la colección no están inicializados aún, informamos o fallamos graciosamente
+                contexto = ""
+                print(f"Advertencia en búsqueda vectorial: {e}")
 
         internet_context = ""
         if not contexto.strip():
