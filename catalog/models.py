@@ -40,6 +40,8 @@ class Product(models.Model):
     weight_kg = models.DecimalField(max_digits=6, decimal_places=2, help_text="Peso en kilogramos para lógica logística")
     image_url = models.URLField(max_length=512, blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name='products')
+    subcategories = models.ManyToManyField(Category, related_name='multi_products', blank=True, help_text="Subcategorías a las que pertenece el producto")
+    is_active = models.BooleanField(default=True, help_text="Indica si el producto está activo para los clientes")
     technical_pdf_url = models.URLField(
         max_length=512, 
         blank=True, 

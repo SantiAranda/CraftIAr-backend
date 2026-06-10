@@ -1,9 +1,13 @@
-from rest_framework import viewsets, generics, filters
-from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
+import logging
+from rest_framework import viewsets, generics, filters, status
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Category, Product
 from .serializers import CategorySerializer, ProductSerializer
-from users.permissions import HasDynamicPermission
+from users.permissions import HasDynamicPermission, has_custom_permission
+
+logger = logging.getLogger('catalog.audit')
 
 class CategoryListView(generics.ListAPIView):
     """
@@ -20,15 +24,22 @@ class ProductViewSet(viewsets.ModelViewSet):
     - Lectura pública (GET) para permitir Server-Side Rendering (SSR) en Next.js.
     - Escritura protegida por permisos dinámicos y alcances (RF 1.4).
     """
-    queryset = Product.objects.all().order_by('name')
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['category', 'category__slug']
+    filterset_fields = ['category', 'category__slug', 'subcategories', 'subcategories__slug', 'is_active']
     search_fields = ['name', 'description', 'sku']
     ordering_fields = ['price', 'name']
 
+    def get_queryset(self):
+        user = self.request.user
+        # Si el usuario es administrador/gestor, ve todos los productos
+        if user.is_authenticated and (user.is_superuser or has_custom_permission(user, 'catalogo.editar_producto')):
+            return Product.objects.all().order_by('name')
+        # De lo contrario, solo ve productos activos
+        return Product.objects.filter(is_active=True).order_by('name')
+
     def get_permissions(self):
-        # Permitir listado y detalle público para que Next.js pueda indexar vía SSR (RNF 7)
+        # Permitir listado y detalle público para que Next.js pueda indexar vía SSR
         if self.action in ['list', 'retrieve']:
             return [AllowAny()]
         
@@ -36,7 +47,6 @@ class ProductViewSet(viewsets.ModelViewSet):
         if self.action == 'create':
             self.required_permission = 'catalogo.crear_producto'
         elif self.action in ['update', 'partial_update']:
-            # Si se actualiza sólo el stock, requerir catalogo.gestionar_stock, de lo contrario catalogo.editar_producto
             if 'stock' in self.request.data and len(self.request.data) <= 2:
                 self.required_permission = 'catalogo.gestionar_stock'
             else:
@@ -51,4 +61,77 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         # Guardar asociando el producto al usuario actual
-        serializer.save(created_by=self.request.user)
+        product = serializer.save(created_by=self.request.user)
+        # Por defecto, agregamos la categoría principal a la lista de subcategorías
+        if product.category:
+            product.subcategories.add(product.category)
+        logger.info(f"AUDIT [Creación]: El usuario {self.request.user.username} creó el producto SKU: {product.sku} ({product.name}).")
+
+    def perform_update(self, serializer):
+        old_instance = self.get_object()
+        old_price = old_instance.price
+        old_stock = old_instance.stock
+        
+        product = serializer.save()
+        
+        # Verificar cambios significativos para auditoría
+        changes = []
+        if old_price != product.price:
+            changes.append(f"Precio modificado de ${old_price} a ${product.price}")
+        if old_stock != product.stock:
+            changes.append(f"Stock ajustado de {old_stock} a {product.stock}")
+            
+        changes_str = ", ".join(changes) if changes else "Datos modificados generales"
+        logger.info(f"AUDIT [Modificación]: El usuario {self.request.user.username} editó el producto SKU: {product.sku} ({product.name}). Detalle: {changes_str}.")
+
+    def destroy(self, request, *args, **kwargs):
+        product = self.get_object()
+        # Verificar si tiene pedidos históricos usando orderitem_set
+        if product.orderitem_set.exists():
+            product.is_active = False
+            product.save()
+            logger.info(f"AUDIT [Desactivación Lógica]: El usuario {request.user.username} desactivó lógicamente el producto SKU: {product.sku} porque tiene ventas asociadas.")
+            return Response(
+                {"status": "Producto con ventas asociadas: se ha desactivado lógicamente para preservar históricos."},
+                status=status.HTTP_200_OK
+            )
+        else:
+            sku = product.sku
+            name = product.name
+            product.delete()
+            logger.info(f"AUDIT [Eliminación Física]: El usuario {request.user.username} eliminó físicamente el producto SKU: {sku} ({name}).")
+            return Response(
+                {"status": "Producto eliminado físicamente con éxito."},
+                status=status.HTTP_204_NO_CONTENT
+            )
+
+
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.permissions import IsAuthenticated
+from django.conf import settings
+
+class ProductImageUploadView(APIView):
+    permission_classes = [IsAuthenticated]
+    parser_classes = [MultiPartParser, FormParser]
+
+    def post(self, request, *args, **kwargs):
+        file_obj = request.FILES.get('image')
+        if not file_obj:
+            return Response({"error": "No se proporcionó ningún archivo de imagen."}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validar formato de archivo (PNG o JPG)
+        if not file_obj.name.lower().endswith(('.png', '.jpg', '.jpeg')):
+            return Response({"error": "Solo se permiten imágenes PNG o JPG."}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validar tamaño máximo (5 MB)
+        if file_obj.size > 5 * 1024 * 1024:
+            return Response({"error": "El archivo excede el tamaño máximo permitido de 5 MB."}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Guardar en media/products/
+        path = default_storage.save(f'products/{file_obj.name}', ContentFile(file_obj.read()))
+        # Construir la URL completa
+        file_url = request.build_absolute_uri(settings.MEDIA_URL + path)
+        return Response({"image_url": file_url}, status=status.HTTP_201_CREATED)
