@@ -23,7 +23,7 @@ class ProductAdmin(admin.ModelAdmin):
     actions = ["reindex_embeddings", "reset_embeddings"]
 
     @admin.action(description="Reindex embeddings for selected products")
-    def reindex_embeddings(self, request, queryset):
+    def reindex_embeddings(self, re.venvquest, queryset):
         try:
             product_ids = list(queryset.values_list("id", flat=True))
             update_product_embeddings.delay(product_ids)
