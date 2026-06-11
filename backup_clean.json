@@ -1,0 +1,3970 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$E3BuUAba9PH4NDlTv9UORs$KlUiDQT/l40hHJMv8QbPOY7PdhsxoXlMR/4qkqbyZrs=",
+    "last_login": "2026-06-10T03:38:55.088Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@construccion.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-08T21:45:23.084Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "!3RNwC6OCAX2wWG7QZpwGgKLJhjAPH05GD2Ukg2mp",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "usuario.demo",
+    "first_name": "Usuario",
+    "last_name": "Demo Google",
+    "email": "usuario.demo@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-08T22:42:00.434Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Pg6LNbzp6I3WkBNPwEFHYg$y2FJLiI+KTV589MPJOD2U+InRzIjCkz4EWn5MfTXisk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Benyi0000",
+    "first_name": "Benjamin",
+    "last_name": "Benitez",
+    "email": "benjamin_benitez@outlook.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-09T02:53:02.636Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$cAetCTUzymUlypSpq6ZV9M$6Cxs5VPIFBiza6r7HPnTzzQV6njxnWkOt2LkSpra1MI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Alex1234",
+    "first_name": "Alex",
+    "last_name": "Morinigo",
+    "email": "Alexanthoni22@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-09T03:04:52.409Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$N79Qv35yKs4Jutq63n1VoG$3ogB9635S3jAD2grnaip35yZHuBXtbPMkco6it/ytJY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "UsuarioPrueba",
+    "first_name": "Gabriel",
+    "last_name": "Gomez",
+    "email": "pruebacorreo@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-09T21:52:37.841Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cs8l2z1xa5e3vjsrrv693f4m27s85799",
+  "fields": {
+    "session_data": ".eJxVjMsKwjAURP8laynmpmlSl4JLceU6THqvpNgHNHYl_rsNdKGr4cwM560C1lcKa5Yl9KxOSqvDbxfRPWUqQ8Fc7Zyry4h-uC33rZ0wynVmGc77-c-QkFPxcuNFwwkcwccHdcKWdW23NAzdGB1hTEteCBrc-kgOvmY5knXE6vMFYxs5Jw:1wX0G3:p5w20MWpJVOOrhJPr8zJcDbgk8BCzxvpcAW2eRtrORw",
+    "expire_date": "2026-06-23T17:28:59.355Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z1j95uhb12cwcidpw4u6adt8xg4yn2wt",
+  "fields": {
+    "session_data": ".eJxVjMsKwjAURP8laynmpmlSl4JLceU6THqvpNgHNHYl_rsNdKGr4cwM560C1lcKa5Yl9KxOSqvDbxfRPWUqQ8Fc7Zyry4h-uC33rZ0wynVmGc77-c-QkFPxcuNFwwkcwccHdcKWdW23NAzdGB1hTEteCBrc-kgOvmY5knXE6vMFYxs5Jw:1wX9mJ:zniiq8oc_sRuUDaRLiPZtqea2-8LEBHVDlly0KQTMTc",
+    "expire_date": "2026-06-24T03:38:55.097Z"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 34,
+  "fields": {
+    "code": "catalogo.crear_producto",
+    "module": "catalog",
+    "description": "Crear nuevos productos"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 35,
+  "fields": {
+    "code": "catalogo.editar_producto",
+    "module": "catalog",
+    "description": "Editar productos existentes"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 36,
+  "fields": {
+    "code": "catalogo.eliminar_producto",
+    "module": "catalog",
+    "description": "Eliminar productos"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 37,
+  "fields": {
+    "code": "catalogo.gestionar_stock",
+    "module": "catalog",
+    "description": "Modificar stock disponible"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 38,
+  "fields": {
+    "code": "catalogo.ver_catalogo",
+    "module": "catalog",
+    "description": "Ver el catßlogo navegable"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 39,
+  "fields": {
+    "code": "pedidos.ver_propios",
+    "module": "orders",
+    "description": "Ver solo sus propios pedidos recibidos"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 40,
+  "fields": {
+    "code": "pedidos.ver_todos",
+    "module": "orders",
+    "description": "Ver todos los pedidos del sistema"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 41,
+  "fields": {
+    "code": "pedidos.cambiar_estado",
+    "module": "orders",
+    "description": "Cambiar estado de un pedido"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 42,
+  "fields": {
+    "code": "carrito.gestionar",
+    "module": "cart",
+    "description": "Agregar, editar y eliminar del carrito"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 43,
+  "fields": {
+    "code": "carrito.checkout",
+    "module": "cart",
+    "description": "Confirmar pedidos"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 44,
+  "fields": {
+    "code": "tutor.acceder",
+    "module": "tutor",
+    "description": "Acceder al Tutor Visual IA"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 45,
+  "fields": {
+    "code": "tutor.ver_historial",
+    "module": "tutor",
+    "description": "Ver historial de proyectos"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 46,
+  "fields": {
+    "code": "gestion.ver_dashboard",
+    "module": "gestion",
+    "description": "Ver mÚtricas y reportes de ventas"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 47,
+  "fields": {
+    "code": "gestion.exportar_reportes",
+    "module": "gestion",
+    "description": "Exportar reportes de pedidos/stock"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 48,
+  "fields": {
+    "code": "gestion.gestionar_banners",
+    "module": "gestion",
+    "description": "Crear y ordenar banners del home"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 49,
+  "fields": {
+    "code": "gestion.gestionar_promociones",
+    "module": "gestion",
+    "description": "Crear cupones y descuentos"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 50,
+  "fields": {
+    "code": "admin.gestionar_usuarios",
+    "module": "admin",
+    "description": "Crear, editar, activar/desactivar usuarios"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 51,
+  "fields": {
+    "code": "admin.asignar_perfiles",
+    "module": "admin",
+    "description": "Asignar/revocar perfiles a usuarios"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 52,
+  "fields": {
+    "code": "admin.configurar_perfiles",
+    "module": "admin",
+    "description": "Crear y configurar perfiles"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 53,
+  "fields": {
+    "code": "admin.ver_auditoria",
+    "module": "admin",
+    "description": "Ver log de auditorÝa"
+  }
+},
+{
+  "model": "users.permissionatom",
+  "pk": 54,
+  "fields": {
+    "code": "admin.configuracion_general",
+    "module": "admin",
+    "description": "Modificar parßmetros globales del sistema"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 11,
+  "fields": {
+    "name": "Comprar en la tienda",
+    "description": "Perfil base para compras ordinarias en la tienda.",
+    "created_at": "2026-06-09T18:02:27.742Z",
+    "updated_at": "2026-06-10T05:18:42.978Z"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 12,
+  "fields": {
+    "name": "Administrador del Sistema",
+    "description": "Acceso total a la configuraci¾n y auditorÝa.",
+    "created_at": "2026-06-09T18:02:27.776Z",
+    "updated_at": "2026-06-09T18:02:27.776Z"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 14,
+  "fields": {
+    "name": "Chat bot",
+    "description": "Permite al usuario una conversacion son el sistema RAG",
+    "created_at": "2026-06-09T23:24:12.383Z",
+    "updated_at": "2026-06-09T23:24:28.892Z"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 15,
+  "fields": {
+    "name": "Agregar productos en la tienda",
+    "description": "Permite agregar productos al eccomerce",
+    "created_at": "2026-06-10T02:53:44.216Z",
+    "updated_at": "2026-06-11T04:04:07.147Z"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 16,
+  "fields": {
+    "name": "Eliminar producto productos de inventario",
+    "description": "",
+    "created_at": "2026-06-10T23:24:31.483Z",
+    "updated_at": "2026-06-10T23:25:59.678Z"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 57,
+  "fields": {
+    "profile": 12,
+    "permission": 34,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 58,
+  "fields": {
+    "profile": 12,
+    "permission": 35,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 59,
+  "fields": {
+    "profile": 12,
+    "permission": 36,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 60,
+  "fields": {
+    "profile": 12,
+    "permission": 37,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 61,
+  "fields": {
+    "profile": 12,
+    "permission": 38,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 62,
+  "fields": {
+    "profile": 12,
+    "permission": 39,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 63,
+  "fields": {
+    "profile": 12,
+    "permission": 40,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 64,
+  "fields": {
+    "profile": 12,
+    "permission": 41,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 65,
+  "fields": {
+    "profile": 12,
+    "permission": 42,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 66,
+  "fields": {
+    "profile": 12,
+    "permission": 43,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 67,
+  "fields": {
+    "profile": 12,
+    "permission": 44,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 68,
+  "fields": {
+    "profile": 12,
+    "permission": 45,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 69,
+  "fields": {
+    "profile": 12,
+    "permission": 46,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 70,
+  "fields": {
+    "profile": 12,
+    "permission": 47,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 71,
+  "fields": {
+    "profile": 12,
+    "permission": 48,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 72,
+  "fields": {
+    "profile": 12,
+    "permission": 49,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 73,
+  "fields": {
+    "profile": 12,
+    "permission": 50,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 74,
+  "fields": {
+    "profile": 12,
+    "permission": 51,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 75,
+  "fields": {
+    "profile": 12,
+    "permission": 52,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 76,
+  "fields": {
+    "profile": 12,
+    "permission": 53,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 77,
+  "fields": {
+    "profile": 12,
+    "permission": 54,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 92,
+  "fields": {
+    "profile": 14,
+    "permission": 44,
+    "scope": "propios"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 123,
+  "fields": {
+    "profile": 11,
+    "permission": 42,
+    "scope": "propios"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 124,
+  "fields": {
+    "profile": 11,
+    "permission": 39,
+    "scope": "propios"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 125,
+  "fields": {
+    "profile": 11,
+    "permission": 40,
+    "scope": "propios"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 126,
+  "fields": {
+    "profile": 11,
+    "permission": 38,
+    "scope": "propios"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 130,
+  "fields": {
+    "profile": 16,
+    "permission": 36,
+    "scope": "propios"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 133,
+  "fields": {
+    "profile": 15,
+    "permission": 34,
+    "scope": "propios"
+  }
+},
+{
+  "model": "users.profilepermission",
+  "pk": 134,
+  "fields": {
+    "profile": 15,
+    "permission": 35,
+    "scope": "todos"
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "assigned_at": "2026-06-09T18:48:04.259Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 11,
+    "assigned_at": "2026-06-09T21:52:39.461Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 11,
+    "assigned_at": "2026-06-09T23:28:33.988Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "assigned_at": "2026-06-09T23:29:17.054Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 16,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "assigned_at": "2026-06-10T02:54:19.076Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 17,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 15,
+    "assigned_at": "2026-06-10T03:24:58.877Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 14,
+    "assigned_at": "2026-06-10T17:21:12.030Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 14,
+    "assigned_at": "2026-06-10T22:10:43.701Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": true
+  }
+},
+{
+  "model": "users.userprofileassignment",
+  "pk": 20,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 16,
+    "assigned_at": "2026-06-10T23:24:51.773Z",
+    "assigned_by": [
+      "admin"
+    ],
+    "expires_at": null,
+    "is_active": false
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T18:48:04.274Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": null,
+    "timestamp": "2026-06-09T21:52:39.475Z",
+    "notes": "Perfil base asignado automßticamente al registrarse"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T22:00:45.237Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T22:01:02.041Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 24,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T22:03:13.609Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 28,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T23:15:25.137Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 32,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T23:28:34.007Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 33,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T23:28:49.769Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 34,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-09T23:29:17.071Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 35,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T02:54:19.091Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 36,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T03:24:39.539Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 37,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 15,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T03:24:58.908Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 38,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T03:25:17.650Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 39,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:09:44.543Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 40,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:10:43.402Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 41,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:10:59.161Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 42,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:11:03.240Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 43,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:17:51.897Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 44,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:18:03.456Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 45,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:18:12.884Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 46,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T05:19:17.191Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 47,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:21:12.053Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 48,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:32:47.055Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 49,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 11,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:32:53.883Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 50,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:33:19.313Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 51,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 15,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:33:22.272Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 52,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 14,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:33:29.590Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 53,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 15,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:34:08.289Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 54,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T17:34:15.262Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 55,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T18:01:36.530Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 56,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T19:17:58.729Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 57,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T21:11:28.491Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 58,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T22:10:18.972Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 59,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T22:10:43.716Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 60,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T22:10:52.264Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 61,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T22:12:10.905Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 62,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T22:12:24.323Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 63,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 16,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-10T23:24:51.789Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 64,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T03:51:45.218Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 65,
+  "fields": {
+    "user": [
+      "UsuarioPrueba"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T03:52:10.092Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 66,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T03:54:23.948Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 67,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 16,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T03:54:30.145Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 68,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 14,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T03:54:36.692Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 69,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T03:55:24.004Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 70,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "revoke",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T03:57:34.670Z",
+    "notes": "Perfil revocado manualmente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 71,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 14,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T04:00:14.782Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "users.permissionauditlog",
+  "pk": 72,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "profile": 15,
+    "action": "assign",
+    "performed_by": [
+      "admin"
+    ],
+    "timestamp": "2026-06-11T04:02:12.288Z",
+    "notes": "Perfil asignado manualmente. Vence: Permanente"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 1,
+  "fields": {
+    "name": "Obra Gruesa",
+    "slug": "obra-gruesa",
+    "parent": null
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 2,
+  "fields": {
+    "name": "Cementos y Cales",
+    "slug": "cementos-y-cales",
+    "parent": 1
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 3,
+  "fields": {
+    "name": "Ladrillos y Bloques",
+    "slug": "ladrillos-y-bloques",
+    "parent": 1
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 4,
+  "fields": {
+    "name": "Hierros y Mallas",
+    "slug": "hierros-y-mallas",
+    "parent": 1
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 5,
+  "fields": {
+    "name": "Terminaciones",
+    "slug": "terminaciones",
+    "parent": null
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 6,
+  "fields": {
+    "name": "Adhesivos y Pastinas",
+    "slug": "adhesivos-y-pastinas",
+    "parent": 5
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 7,
+  "fields": {
+    "name": "Yesos y Placas de Yeso",
+    "slug": "yesos-y-placas-de-yeso",
+    "parent": 5
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 8,
+  "fields": {
+    "name": "Pinturas e Impermeabilizantes",
+    "slug": "pinturas-e-impermeabilizantes",
+    "parent": 5
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "sku": "Cem-001",
+    "name": "Cemento Portland Normal Loma Negra 50kg",
+    "description": "Cemento de alta resistencia para estructuras de hormig¾n y alba±ilerÝa general.",
+    "price": "12500.00",
+    "stock": 150,
+    "weight_kg": "50.00",
+    "image_url": "http://localhost:8000/media/products/CEMENTO-LOMA-NEGRA-x-50-kg.jpg",
+    "category": 2,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      2
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "sku": "Cem-002",
+    "name": "Cemento Portland Avellaneda 50kg",
+    "description": "Cemento de fraguado rßpido y alta resistencia inicial, ¾ptimo para losas.",
+    "price": "12300.00",
+    "stock": 100,
+    "weight_kg": "50.00",
+    "image_url": "http://localhost:8000/media/products/cemento%20avellaneda.png",
+    "category": 2,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      2
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+    "sku": "Cem-003",
+    "name": "Cal Hidratada Loma Negra 25kg",
+    "description": "Cal hidratada aÚrea de alta plasticidad para mezcla de revoques y contrapisos.",
+    "price": "5400.00",
+    "stock": 199,
+    "weight_kg": "25.00",
+    "image_url": "http://localhost:8000/media/products/CAL-HIDRATADA-HIDRAULICA-CACIQUE-MAX-LOMA-NEGRA.png",
+    "category": 2,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      2
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+    "sku": "Lad-001",
+    "name": "Ladrillo Hueco 12x18x33 (Por unidad)",
+    "description": "Ladrillo cerßmico hueco de 6 tubos para muros portantes y divisiones.",
+    "price": "480.00",
+    "stock": 2500,
+    "weight_kg": "4.20",
+    "image_url": "https://placehold.co/300?text=Lad-001",
+    "category": 3,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "sku": "Lad-002",
+    "name": "Ladrillo Hueco 18x18x33 (Por unidad)",
+    "description": "Ladrillo hueco de 9 tubos ideal para paredes exteriores y cerramientos tÚrmicos.",
+    "price": "650.00",
+    "stock": 1800,
+    "weight_kg": "5.80",
+    "image_url": "https://placehold.co/300?text=Lad-002",
+    "category": 3,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "sku": "Lad-003",
+    "name": "Ladrillo Com·n de Campo (Por 1000 u)",
+    "description": "Ladrillo macizo tradicional para hornos, paredes a la vista y cimientos.",
+    "price": "145000.00",
+    "stock": 15,
+    "weight_kg": "2000.00",
+    "image_url": "https://placehold.co/300?text=Lad-003",
+    "category": 3,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "sku": "Lad-004",
+    "name": "Bloque de Hormig¾n 19x19x39 (Por unidad)",
+    "description": "Bloque de hormig¾n prensado para construcci¾n modular de alta velocidad.",
+    "price": "980.00",
+    "stock": 1200,
+    "weight_kg": "14.00",
+    "image_url": "http://localhost:8000/media/products/bloques-hormigon.jpg",
+    "category": 3,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "sku": "Hie-001",
+    "name": "Hierro Nervado Aluar 8mm (Barra 12m)",
+    "description": "Barra de acero nervado grado 420 para armaduras de hormig¾n armado.",
+    "price": "10800.00",
+    "stock": 80,
+    "weight_kg": "4.74",
+    "image_url": "https://placehold.co/300?text=Hie-001",
+    "category": 4,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      4
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "sku": "Hie-002",
+    "name": "Hierro Nervado Aluar 10mm (Barra 12m)",
+    "description": "Barra de acero nervado grado 420 utilizada en vigas y columnas principales.",
+    "price": "16800.00",
+    "stock": 60,
+    "weight_kg": "7.40",
+    "image_url": "https://placehold.co/300?text=Hie-002",
+    "category": 4,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      4
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+    "sku": "Hie-003",
+    "name": "Hierro Nervado Aluar 12mm (Barra 12m)",
+    "description": "Barra de acero nervado estructural de alta exigencia.",
+    "price": "24100.00",
+    "stock": 40,
+    "weight_kg": "10.65",
+    "image_url": "https://placehold.co/300?text=Hie-003",
+    "category": 4,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      4
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "sku": "Hie-004",
+    "name": "Malla Sima C-15 15x15 (Pa±o 2.4x6m)",
+    "description": "Malla electrosoldada de alambre nervado para refuerzo de contrapisos y plateas.",
+    "price": "38500.00",
+    "stock": 30,
+    "weight_kg": "22.00",
+    "image_url": "https://placehold.co/300?text=Hie-004",
+    "category": 4,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      4
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "sku": "Adh-001",
+    "name": "Pegamento Impermeable Weber Col 25kg",
+    "description": "Mezcla adhesiva impermeable para la colocaci¾n de cerßmicas en interiores y exteriores.",
+    "price": "8700.00",
+    "stock": 90,
+    "weight_kg": "25.00",
+    "image_url": "https://placehold.co/300?text=Adh-001",
+    "category": 6,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      6
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "sku": "Adh-002",
+    "name": "Adhesivo Weber Porcelanato Flex 25kg",
+    "description": "Pegamento flexible de alta tecnologÝa para porcelanatos de gran formato.",
+    "price": "17500.00",
+    "stock": 75,
+    "weight_kg": "25.00",
+    "image_url": "http://localhost:8000/media/products/weber-adhesivo-flex-porcellanatos-25kg-92-0126.jpg",
+    "category": 6,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      6
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 14,
+  "fields": {
+    "sku": "Adh-003",
+    "name": "Pastina Weber Classic 2kg (Gris)",
+    "description": "Mezcla cementicia para relleno de juntas de 1 a 4 mm en revestimientos.",
+    "price": "2900.00",
+    "stock": 120,
+    "weight_kg": "2.00",
+    "image_url": "https://placehold.co/300?text=Adh-003",
+    "category": 6,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      6
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+    "sku": "Yes-001",
+    "name": "Placa de Yeso Durlock Estßndar 12.5mm",
+    "description": "Placa de yeso estßndar de 1.20 x 2.40 metros para tabiques y cielorrasos.",
+    "price": "14800.00",
+    "stock": 85,
+    "weight_kg": "21.00",
+    "image_url": "https://placehold.co/300?text=Yes-001",
+    "category": 7,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      7
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 16,
+  "fields": {
+    "sku": "Yes-002",
+    "name": "Placa de Yeso Durlock Verde (Antihumedad)",
+    "description": "Placa de yeso impregnada para zonas h·medas como ba±os y cocinas.",
+    "price": "22300.00",
+    "stock": 50,
+    "weight_kg": "22.00",
+    "image_url": "https://placehold.co/300?text=Yes-002",
+    "category": 7,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      7
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 17,
+  "fields": {
+    "sku": "Yes-003",
+    "name": "Yeso Manual Tuyango 40kg",
+    "description": "Yeso tradicional de fraguado lento para enlucidos y revoques interiores de alta calidad.",
+    "price": "9500.00",
+    "stock": 110,
+    "weight_kg": "40.00",
+    "image_url": "https://placehold.co/300?text=Yes-003",
+    "category": 7,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      7
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 18,
+  "fields": {
+    "sku": "Pin-001",
+    "name": "Pintura Lßtex Interior Alba Mate 20L",
+    "description": "Pintura al agua de alto poder cubritivo y lavable para ambientes interiores.",
+    "price": "89000.00",
+    "stock": 25,
+    "weight_kg": "28.00",
+    "image_url": "https://placehold.co/300?text=Pin-001",
+    "category": 8,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      8
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 19,
+  "fields": {
+    "sku": "Pin-002",
+    "name": "Membrana LÝquida Weber Tech 20kg",
+    "description": "Impermeabilizante acrÝlico elastomÚrico con poliuretano para techos y terrazas transitables.",
+    "price": "124000.00",
+    "stock": 30,
+    "weight_kg": "20.00",
+    "image_url": "https://placehold.co/300?text=Pin-002",
+    "category": 8,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      8
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 20,
+  "fields": {
+    "sku": "Pin-003",
+    "name": "Fijador Sellador Alba Concentrado 4L",
+    "description": "Acondicionador de superficies para homogeneizar la absorci¾n antes de pintar.",
+    "price": "15200.00",
+    "stock": 50,
+    "weight_kg": "4.20",
+    "image_url": "http://localhost:8000/media/products/2172_2172_0_2026-05-08_16_00_08.jpeg",
+    "category": 8,
+    "is_active": true,
+    "technical_pdf_url": null,
+    "created_by": null,
+    "embedding": null,
+    "subcategories": [
+      8
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 21,
+  "fields": {
+    "sku": "Cem-004",
+    "name": "Cemento Portland",
+    "description": "Prueba",
+    "price": "7000.00",
+    "stock": 34,
+    "weight_kg": "25.00",
+    "image_url": "http://localhost:8000/media/products/6598569.jpg",
+    "category": 2,
+    "is_active": false,
+    "technical_pdf_url": null,
+    "created_by": [
+      "Benyi0000"
+    ],
+    "embedding": null,
+    "subcategories": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "Benyi0000"
+    ],
+    "status": "paid",
+    "total": "47400.00",
+    "created_at": "2026-06-10T03:42:53.478Z",
+    "updated_at": "2026-06-10T03:42:53.487Z"
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 21,
+    "quantity": 6,
+    "price_at_purchase": "7000.00"
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 1,
+    "product": 3,
+    "quantity": 1,
+    "price_at_purchase": "5400.00"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "00cf8edf-479d-4d8f-83ea-507870f3d481",
+  "fields": {
+    "created_at": "2026-06-10T22:56:00.870Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "00dd55fc-07a5-4498-8d8f-1ea663599fd0",
+  "fields": {
+    "created_at": "2026-06-10T23:48:44.025Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "01767718-891e-4d60-ba62-7fedad4d7e61",
+  "fields": {
+    "created_at": "2026-06-09T20:44:57.987Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0338ee85-dc7c-4d5c-a6ae-0636d4fe9236",
+  "fields": {
+    "created_at": "2026-06-10T21:22:37.500Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "033ea9d0-4395-451e-96ce-cd4b5c2fef16",
+  "fields": {
+    "created_at": "2026-06-10T18:55:13.756Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "045087b5-a99b-46fe-8986-c8102b91e46c",
+  "fields": {
+    "created_at": "2026-06-10T23:18:39.381Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "04eb1180-2c21-4279-a2ae-bedcd852822d",
+  "fields": {
+    "created_at": "2026-06-10T23:04:01.512Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0771e16e-a0b4-4a8a-9d5b-3faae5f439a1",
+  "fields": {
+    "created_at": "2026-06-09T23:16:46.358Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "07afda26-38ef-4cdc-b1b3-cbf5564c1b0b",
+  "fields": {
+    "created_at": "2026-06-11T03:52:36.560Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "07e9f051-297a-478a-af2d-03403b56a89d",
+  "fields": {
+    "created_at": "2026-06-10T23:39:20.565Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0b03981d-0e33-4f2b-92cd-c4add1c73046",
+  "fields": {
+    "created_at": "2026-06-10T23:40:12.767Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0bd6231d-c242-4d51-98a3-a94bc5ae4dca",
+  "fields": {
+    "created_at": "2026-06-11T03:49:11.190Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0c6150a5-ebe0-4e6b-a52b-df1b65a7c49c",
+  "fields": {
+    "created_at": "2026-06-10T23:42:32.301Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0e185347-59fa-452c-9a07-745dbbaa9c68",
+  "fields": {
+    "created_at": "2026-06-10T22:39:10.037Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0e71b973-60df-43f0-ba31-69b2fcd263fd",
+  "fields": {
+    "created_at": "2026-06-10T18:01:49.418Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0ec1a49c-dd5d-4a75-b150-8c3b95770d74",
+  "fields": {
+    "created_at": "2026-06-10T23:04:02.849Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "0eea5da8-770e-4b85-81f9-494650c1def4",
+  "fields": {
+    "created_at": "2026-06-10T22:45:08.727Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "104d6d91-ccd5-43d2-b73d-c7df7ffafe34",
+  "fields": {
+    "created_at": "2026-06-10T23:53:01.600Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "11fdbc2e-01fc-410c-8c15-52a49e3a9519",
+  "fields": {
+    "created_at": "2026-06-10T22:56:00.146Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "14737a90-75da-4012-b9b5-5fd4c66da42f",
+  "fields": {
+    "created_at": "2026-06-10T23:47:37.376Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "16b9c74e-aa8b-4aff-8c7c-57e2e058c3e4",
+  "fields": {
+    "created_at": "2026-06-10T21:32:16.381Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "170f1e51-13af-4ade-a19a-fae4aadf96a2",
+  "fields": {
+    "created_at": "2026-06-09T23:15:47.518Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "1789934f-f1fd-4dc7-b7b4-d84bb6312d81",
+  "fields": {
+    "created_at": "2026-06-10T20:56:44.892Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "1afc6017-a222-420c-ad4f-990cf73f180e",
+  "fields": {
+    "created_at": "2026-06-09T22:07:30.610Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "1b3d561a-21ce-4a3c-b69a-1cf94f3f2e46",
+  "fields": {
+    "created_at": "2026-06-11T03:52:40.718Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "1c680bb8-dc20-43a7-931f-6aeb0cbea754",
+  "fields": {
+    "created_at": "2026-06-10T23:42:00.508Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "1ec93815-5ca5-4903-8c80-7b4219ffcaee",
+  "fields": {
+    "created_at": "2026-06-10T23:53:01.506Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "25610262-22f5-4407-87f7-0616023b9e61",
+  "fields": {
+    "created_at": "2026-06-11T03:57:52.246Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "2762e091-aa8f-4bd1-99a9-1ce28cf3b161",
+  "fields": {
+    "created_at": "2026-06-10T21:35:15.967Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "27818718-fd40-4a4d-9997-944b78c8336f",
+  "fields": {
+    "created_at": "2026-06-10T23:42:21.679Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "2790790e-9588-48a3-89cd-1c40953e9b6a",
+  "fields": {
+    "created_at": "2026-06-10T21:27:09.636Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "2ed0aca5-abd6-425a-ba1c-5ad812257a43",
+  "fields": {
+    "created_at": "2026-06-10T23:18:37.149Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "305c48a5-a226-49a9-84fe-44e95c35a761",
+  "fields": {
+    "created_at": "2026-06-10T22:45:11.682Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "308916cf-4202-4883-a72c-5e06f8d2548d",
+  "fields": {
+    "created_at": "2026-06-10T23:42:07.869Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "30d39cce-8afd-418e-9cdf-f313f888fc4e",
+  "fields": {
+    "created_at": "2026-06-10T21:26:34.766Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "3130eb4f-6be9-4b97-86db-8d25c8b37780",
+  "fields": {
+    "created_at": "2026-06-10T22:26:52.724Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "322467e7-0b6d-466b-b443-bbb54750984a",
+  "fields": {
+    "created_at": "2026-06-10T23:37:35.514Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "39bb18d6-9648-44f0-8e5c-d1af9844de3e",
+  "fields": {
+    "created_at": "2026-06-10T17:32:37.316Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "39d3a947-87da-4429-a65e-af44372c8746",
+  "fields": {
+    "created_at": "2026-06-10T22:04:05.559Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "3aca2030-d5c0-4d6f-87d1-ec148002c494",
+  "fields": {
+    "created_at": "2026-06-10T23:06:42.903Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "3b52804a-1643-42ff-8b30-6a6a0e4e8a9f",
+  "fields": {
+    "created_at": "2026-06-10T23:42:24.357Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "3b8b008d-69f8-4200-a7cd-baae2887829d",
+  "fields": {
+    "created_at": "2026-06-10T23:55:25.559Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "3bcc4b30-706d-49e1-b300-6d6c34270408",
+  "fields": {
+    "created_at": "2026-06-10T23:01:48.331Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "3c52ed31-2147-44bb-8a59-00777bfd3c90",
+  "fields": {
+    "created_at": "2026-06-10T22:53:35.810Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "3ed825e5-26fa-4c9f-a711-e2ad89f6805f",
+  "fields": {
+    "created_at": "2026-06-11T04:00:45.820Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "432be1a2-cbf6-45d0-a092-93bb72120173",
+  "fields": {
+    "created_at": "2026-06-10T21:26:22.919Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "445a6807-2b43-4afc-91d2-eac738ef9b7a",
+  "fields": {
+    "created_at": "2026-06-10T22:29:08.584Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "458c1cc6-c79f-412d-821f-a25d32f4053e",
+  "fields": {
+    "created_at": "2026-06-10T23:06:42.901Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "47918160-dabc-4a73-a859-c9f5cad89ee5",
+  "fields": {
+    "created_at": "2026-06-10T23:34:13.832Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "47be805b-387a-4636-9d7f-a25f0dfabc64",
+  "fields": {
+    "created_at": "2026-06-10T21:22:37.494Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4835bc3a-783e-4970-8423-ded2ec7485b2",
+  "fields": {
+    "created_at": "2026-06-09T23:16:36.754Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4879ff9a-bb50-4750-8f5d-d88f9fabfa88",
+  "fields": {
+    "created_at": "2026-06-10T23:42:27.768Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4b40a3b9-a121-49de-882a-e82b52d71133",
+  "fields": {
+    "created_at": "2026-06-10T23:04:01.635Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4bbb5148-98c7-48de-aaaa-31be0cb58a88",
+  "fields": {
+    "created_at": "2026-06-10T23:06:54.799Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4bd98624-3ff3-4965-9b67-823419c92a45",
+  "fields": {
+    "created_at": "2026-06-09T21:53:24.616Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4f46e258-31dc-4e4f-b3d4-34818e7c5782",
+  "fields": {
+    "created_at": "2026-06-10T23:39:20.569Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4f4e35a6-c31d-4045-b44d-bfa3f2ab78a2",
+  "fields": {
+    "created_at": "2026-06-09T23:16:46.355Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4f55d994-5d2f-4ef3-8a68-ea3884c81cb7",
+  "fields": {
+    "created_at": "2026-06-11T03:52:19.558Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4f6230a7-7c29-43f3-8c61-8435bf322514",
+  "fields": {
+    "created_at": "2026-06-09T20:08:12.542Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "4fefc0f4-52b7-4718-89ed-df870f6827b7",
+  "fields": {
+    "created_at": "2026-06-10T23:42:25.417Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "50238348-a8a6-42bf-b474-be431814527e",
+  "fields": {
+    "created_at": "2026-06-10T22:56:00.868Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "51483d36-c553-49f1-bd36-08fd03132b06",
+  "fields": {
+    "created_at": "2026-06-09T20:23:33.790Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "520373ae-ace8-47dc-93d3-0889ddde6c81",
+  "fields": {
+    "created_at": "2026-06-10T23:42:37.197Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5275709a-1611-4bcf-bd27-f94a1d34762a",
+  "fields": {
+    "created_at": "2026-06-10T22:12:02.881Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5311bc93-1371-45c0-a32a-25670972def7",
+  "fields": {
+    "created_at": "2026-06-10T23:42:24.361Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "575f1655-e3cc-4508-a2b0-3539bec41981",
+  "fields": {
+    "created_at": "2026-06-11T03:49:35.686Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "598a00af-33c2-4131-a767-4defe9d7fcb2",
+  "fields": {
+    "created_at": "2026-06-10T21:26:34.772Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5a64cd31-7210-4d0c-8779-0fc085151770",
+  "fields": {
+    "created_at": "2026-06-09T20:23:33.786Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5be3229a-4d93-4a49-be57-4d77886a6ada",
+  "fields": {
+    "created_at": "2026-06-10T22:56:00.148Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5c25ecd9-6a5f-4157-8353-bff765a2b40e",
+  "fields": {
+    "created_at": "2026-06-10T23:42:01.454Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5d2b0fda-bdc4-4226-ac6f-eb2005e19311",
+  "fields": {
+    "created_at": "2026-06-10T21:26:26.317Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5e2efef3-8689-4b89-8513-521d8c750fd2",
+  "fields": {
+    "created_at": "2026-06-10T21:27:09.637Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5f9f3393-1a6f-43ec-bb2a-49d1844ecc05",
+  "fields": {
+    "created_at": "2026-06-10T23:55:26.226Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "5fa7351b-46f8-42f9-9641-c5cf9fe7b30f",
+  "fields": {
+    "created_at": "2026-06-10T22:11:53.824Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "611b6d65-4755-4a90-a18d-171b8d2b7481",
+  "fields": {
+    "created_at": "2026-06-09T20:08:12.537Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "62782daa-47b7-46a0-aba9-83cba50afb53",
+  "fields": {
+    "created_at": "2026-06-10T23:18:39.367Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "644d0555-ea33-4fd1-8f55-4110c061b88c",
+  "fields": {
+    "created_at": "2026-06-10T23:42:00.510Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "6566b677-0811-443c-93e1-a67a1c6acfe8",
+  "fields": {
+    "created_at": "2026-06-10T23:18:40.209Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "65cb2f0a-efd8-4606-aaea-251f12191b25",
+  "fields": {
+    "created_at": "2026-06-11T04:00:38.291Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "67527390-cd14-4baf-ab72-eaa65639e443",
+  "fields": {
+    "created_at": "2026-06-10T23:40:04.258Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "693e57d4-6ef8-4b0a-bddb-ec2f208c53ae",
+  "fields": {
+    "created_at": "2026-06-09T20:23:09.801Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "6a621569-872d-4941-bbd6-9c9c4d391826",
+  "fields": {
+    "created_at": "2026-06-10T21:28:06.639Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "6a81b543-33b2-43c1-ae4d-9f7ac59d9f8d",
+  "fields": {
+    "created_at": "2026-06-09T22:07:30.598Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "6b9c9af9-3e62-4939-b116-ffdc96059f72",
+  "fields": {
+    "created_at": "2026-06-10T16:53:46.587Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "6c9c6534-ae1a-4966-813a-6815c53dc466",
+  "fields": {
+    "created_at": "2026-06-10T22:53:35.725Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "6ce7d715-0362-436b-b397-073f4c688642",
+  "fields": {
+    "created_at": "2026-06-09T20:46:03.998Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "6e3b47f8-d8a3-4850-a0c3-8c983d07224a",
+  "fields": {
+    "created_at": "2026-06-10T23:48:44.111Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "7072efb8-c8de-4e43-82e6-c9474431307d",
+  "fields": {
+    "created_at": "2026-06-10T22:29:08.589Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "756c5e12-52e0-4f93-81fa-bc2bcac55d9c",
+  "fields": {
+    "created_at": "2026-06-11T03:49:35.691Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "76f03cb2-3e88-4023-86fb-4dde87d06eb5",
+  "fields": {
+    "created_at": "2026-06-10T22:36:17.253Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "776450ab-a16a-4f08-b8d0-4149c073eb32",
+  "fields": {
+    "created_at": "2026-06-11T04:00:50.331Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "782c3ea4-cc16-4b79-9444-b8865317d7ae",
+  "fields": {
+    "created_at": "2026-06-11T04:00:38.241Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "7968373c-62bc-45b3-8016-29bacc9ab7cf",
+  "fields": {
+    "created_at": "2026-06-10T22:53:37.034Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+  "fields": {
+    "created_at": "2026-06-10T21:35:16.044Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "7ae2a412-fa5c-4437-8193-74a942c98d3f",
+  "fields": {
+    "created_at": "2026-06-09T23:29:33.703Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "7b2319f7-5845-4ac5-9a90-43d384d0a51e",
+  "fields": {
+    "created_at": "2026-06-10T22:50:11.109Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "7c50ee5b-3f79-4c86-a460-dee4ca59c877",
+  "fields": {
+    "created_at": "2026-06-10T22:50:06.638Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "7c9e877a-f754-4b12-85b2-af8bc2932285",
+  "fields": {
+    "created_at": "2026-06-10T23:42:32.307Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "7e5adf04-d776-4f85-996a-a3e796c6f164",
+  "fields": {
+    "created_at": "2026-06-10T23:42:07.871Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "810f49d8-e33d-4199-963e-0b9ddf52bae6",
+  "fields": {
+    "created_at": "2026-06-10T23:55:26.204Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "81a8a20e-4205-41e4-80a9-e06a8a27c6ae",
+  "fields": {
+    "created_at": "2026-06-10T22:58:17.109Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "843db817-e051-4a8c-b464-b87d9658340d",
+  "fields": {
+    "created_at": "2026-06-10T23:42:30.707Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "865837d8-142c-4adf-b07d-393495d6aeb3",
+  "fields": {
+    "created_at": "2026-06-10T23:55:25.555Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "897a2ded-8772-4d9d-9cbc-a6dcd40008c2",
+  "fields": {
+    "created_at": "2026-06-09T23:29:33.701Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "8acd63ea-e071-4993-b4ae-8748eb2ca71f",
+  "fields": {
+    "created_at": "2026-06-10T22:37:04.031Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "8cb770e2-972f-46cd-981b-d6c6cc409b33",
+  "fields": {
+    "created_at": "2026-06-09T23:16:42.272Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "8d8c88c5-0d22-4d46-8a8d-6e9c746c1fb7",
+  "fields": {
+    "created_at": "2026-06-10T21:34:41.861Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "90eea126-aa26-4f6f-817f-751b49c60eed",
+  "fields": {
+    "created_at": "2026-06-10T23:18:40.207Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "92f5a8a7-1b29-4034-8864-fae4ddeb9886",
+  "fields": {
+    "created_at": "2026-06-09T20:44:57.978Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "93268dd5-dbfd-46e1-bc6c-eb90be7ef19f",
+  "fields": {
+    "created_at": "2026-06-10T21:34:41.858Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "93a207ad-4860-4023-9fd7-7faa5112fc82",
+  "fields": {
+    "created_at": "2026-06-11T03:52:19.602Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "9530a259-b47f-4057-bcf2-9d559c5f5456",
+  "fields": {
+    "created_at": "2026-06-11T04:00:50.346Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "95fb9487-1997-46d2-bd77-6a9e4569db7b",
+  "fields": {
+    "created_at": "2026-06-10T22:29:01.305Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "9828e908-ddb7-4091-bf0a-93503e7da3b1",
+  "fields": {
+    "created_at": "2026-06-10T23:06:30.886Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "9d814aac-a0fb-43d0-9ce3-b0e22470e5dc",
+  "fields": {
+    "created_at": "2026-06-10T22:50:13.564Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a045e292-c4d9-4b39-9236-9dd4b9f18347",
+  "fields": {
+    "created_at": "2026-06-10T23:18:41.662Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a0606116-54bb-414e-98f2-b08347cfd184",
+  "fields": {
+    "created_at": "2026-06-10T21:32:23.004Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a168126f-62fa-4ab6-b27c-0f6dafa0a9d8",
+  "fields": {
+    "created_at": "2026-06-10T23:42:36.282Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a1cd6015-73b5-4236-b5af-ec17713c6d4d",
+  "fields": {
+    "created_at": "2026-06-10T17:21:33.185Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a33484c9-80db-4040-908f-ae4e01f4d236",
+  "fields": {
+    "created_at": "2026-06-10T23:40:13.693Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a6a6b4a1-3657-4ba4-9372-9a0a2dedd319",
+  "fields": {
+    "created_at": "2026-06-10T23:03:46.621Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a754277b-457c-43dd-97f5-b822c82a0b28",
+  "fields": {
+    "created_at": "2026-06-10T17:21:33.188Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a85f90ef-0b10-4309-ba8c-6bc334dd3267",
+  "fields": {
+    "created_at": "2026-06-10T22:50:10.995Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a880121d-2093-4c95-a29c-39adfc950c3c",
+  "fields": {
+    "created_at": "2026-06-10T23:47:37.449Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "a8eca596-535e-4a09-8dce-54cb97e173af",
+  "fields": {
+    "created_at": "2026-06-10T23:06:54.788Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ab241f99-97ef-446e-9378-3f66d2bd58d5",
+  "fields": {
+    "created_at": "2026-06-10T23:42:04.781Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ab291256-d212-42ca-ace1-fe7e0c1dabc2",
+  "fields": {
+    "created_at": "2026-06-10T22:12:28.299Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "aec5a8ce-8d7f-4846-b1a6-03e5d5160bd0",
+  "fields": {
+    "created_at": "2026-06-10T21:30:01.191Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "aed25cfa-1f05-473e-88d7-0e17e98cf4e3",
+  "fields": {
+    "created_at": "2026-06-09T20:46:03.996Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "b2cf94e3-816b-448d-9889-718651126e1d",
+  "fields": {
+    "created_at": "2026-06-10T17:32:37.366Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "b3b52710-6ab8-4f36-ac8d-78e1f584efdc",
+  "fields": {
+    "created_at": "2026-06-10T22:04:05.563Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "b47f7a68-81ac-4bd2-85ed-72dc32fe9adf",
+  "fields": {
+    "created_at": "2026-06-10T22:58:17.106Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "b58d1f4e-5601-4528-911c-35e6f9d8f3b2",
+  "fields": {
+    "created_at": "2026-06-10T23:42:30.700Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "b64eb9fb-d430-4589-a76b-e88d8598d676",
+  "fields": {
+    "created_at": "2026-06-10T22:35:33.865Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "b7c41d26-daab-4259-919e-3fc1bbd2c11c",
+  "fields": {
+    "created_at": "2026-06-10T22:29:14.082Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "b9158459-e86d-47f0-9a07-b7f20653abe3",
+  "fields": {
+    "created_at": "2026-06-10T22:53:37.032Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ba04a19f-0225-4303-9dee-7841e1d0a126",
+  "fields": {
+    "created_at": "2026-06-10T23:42:34.208Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "bcc5d526-aa3b-4f81-8b09-82a921e20079",
+  "fields": {
+    "created_at": "2026-06-10T23:42:19.220Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c018454d-15e8-40d8-9634-ab8fa7a587d8",
+  "fields": {
+    "created_at": "2026-06-09T21:57:30.957Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c0224b90-e7cd-4593-90f4-eb50720a4047",
+  "fields": {
+    "created_at": "2026-06-10T23:42:33.465Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c05c1e99-5cbe-417e-ac9a-61c5adf0cc97",
+  "fields": {
+    "created_at": "2026-06-10T22:11:53.797Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c11ff71e-616c-483a-9d09-7eb697735f97",
+  "fields": {
+    "created_at": "2026-06-10T21:32:23.001Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c22f54df-356f-4636-a16a-7565a6950414",
+  "fields": {
+    "created_at": "2026-06-10T16:53:46.593Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c2dacbea-f2e6-4eff-9e02-f372c3348d00",
+  "fields": {
+    "created_at": "2026-06-10T22:29:01.229Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c41d3ff9-32d2-47d0-9635-968434c1df7d",
+  "fields": {
+    "created_at": "2026-06-10T23:42:26.747Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c4a597d2-ec42-46b6-85d8-712b865672bd",
+  "fields": {
+    "created_at": "2026-06-10T23:42:21.644Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c5202fb4-4f9b-4de3-8113-68a556e98506",
+  "fields": {
+    "created_at": "2026-06-10T18:01:49.410Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c757350a-60cc-4251-b7a5-7a7953291cbc",
+  "fields": {
+    "created_at": "2026-06-10T23:42:25.419Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c758f772-a1eb-46a5-aa5c-90b25c60e41d",
+  "fields": {
+    "created_at": "2026-06-10T22:29:14.091Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c75f9419-7236-4f68-a3c3-ff3a258ce599",
+  "fields": {
+    "created_at": "2026-06-11T03:49:11.166Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c93fc827-6b60-48dc-a8e7-2ede0ea4a5ef",
+  "fields": {
+    "created_at": "2026-06-10T21:28:06.641Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "c9a558ff-a89b-461b-819c-8673bc19b0c5",
+  "fields": {
+    "created_at": "2026-06-09T23:17:00.204Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ca894380-f0b8-477a-9bfa-adda6973abd1",
+  "fields": {
+    "created_at": "2026-06-10T21:22:07.992Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "cae602b6-7658-4c30-b013-552bfc8f3e02",
+  "fields": {
+    "created_at": "2026-06-09T21:53:24.627Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "cb846be1-400d-4d3a-8c4d-6d25b66b17cc",
+  "fields": {
+    "created_at": "2026-06-10T23:18:41.659Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ccbc54e0-50bc-423d-9ef1-2490893589d2",
+  "fields": {
+    "created_at": "2026-06-10T23:34:13.973Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ce06af48-2a49-44be-aa43-a1f264506f8a",
+  "fields": {
+    "created_at": "2026-06-10T20:56:44.883Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ce7559cc-972e-42fd-9674-d3f7a9915211",
+  "fields": {
+    "created_at": "2026-06-10T23:01:48.334Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "cf0deec8-8f18-4f96-b94b-8d2d70ee0e0a",
+  "fields": {
+    "created_at": "2026-06-09T23:15:47.514Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "cf35c683-c987-4f47-9685-f4b716893a7f",
+  "fields": {
+    "created_at": "2026-06-10T23:42:26.745Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "cfab1a90-4bae-49ec-bcb0-cc821119904c",
+  "fields": {
+    "created_at": "2026-06-11T03:52:36.499Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d09bb6e5-ec47-4f20-b0b9-c6eb169ed588",
+  "fields": {
+    "created_at": "2026-06-10T22:26:52.707Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d31a1a0f-1861-42e3-b24b-c737ad158049",
+  "fields": {
+    "created_at": "2026-06-10T22:26:40.721Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d3895219-600e-4eb2-a480-3a3651dbcca5",
+  "fields": {
+    "created_at": "2026-06-09T21:57:30.966Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d3c77a33-db78-426a-a292-4331d633f429",
+  "fields": {
+    "created_at": "2026-06-09T23:17:00.202Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d44f24bc-5ec4-48d3-8dc5-62e30c6c53ca",
+  "fields": {
+    "created_at": "2026-06-10T21:30:01.192Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d733ef66-a81f-40ed-a201-6a5f82baabd6",
+  "fields": {
+    "created_at": "2026-06-10T23:18:37.150Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d76fba89-eba1-4e1c-91a9-cfe351cb77ab",
+  "fields": {
+    "created_at": "2026-06-10T23:42:27.765Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d8111459-9446-4a69-805a-811b56955fa4",
+  "fields": {
+    "created_at": "2026-06-10T22:39:09.953Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d92795c3-3ea8-425e-a6ff-b39aa5864c02",
+  "fields": {
+    "created_at": "2026-06-09T22:06:47.974Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "d9b426b1-a7fb-4154-8fab-3031f1047081",
+  "fields": {
+    "created_at": "2026-06-09T23:16:36.752Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "dd216f81-a2b0-4da8-8a03-c4fda3b22501",
+  "fields": {
+    "created_at": "2026-06-10T23:37:35.511Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "dd5a8db1-39e4-4518-9d8d-d7c17885d767",
+  "fields": {
+    "created_at": "2026-06-10T21:22:08.000Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "de0737ab-3501-4ea9-a28a-1a305262eb3a",
+  "fields": {
+    "created_at": "2026-06-11T04:00:45.824Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "deb109bc-58e0-44dd-8418-7a245a61aa7d",
+  "fields": {
+    "created_at": "2026-06-10T21:32:16.379Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "df11ffe2-b333-4f2a-ab8c-4bd780260e4d",
+  "fields": {
+    "created_at": "2026-06-10T21:26:22.884Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "dfc6ac2c-ad12-42b9-ace3-068804b641c6",
+  "fields": {
+    "created_at": "2026-06-10T23:04:02.828Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "e502fcfe-0ae6-47ca-9453-d7f089cc5b12",
+  "fields": {
+    "created_at": "2026-06-10T21:26:26.289Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "e51bf327-b9d1-4ea0-a7f7-1c3dbe51fa38",
+  "fields": {
+    "created_at": "2026-06-09T23:16:42.270Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "e5e8ee1d-cf33-4373-818e-075f56d0ec44",
+  "fields": {
+    "created_at": "2026-06-10T23:42:01.470Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "e5eb9aa0-308e-4514-943d-17a6e8acce3a",
+  "fields": {
+    "created_at": "2026-06-10T23:40:12.773Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "e7f63e79-90c9-4cfd-b1ff-a2bd2560449c",
+  "fields": {
+    "created_at": "2026-06-10T22:12:02.874Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "e8203802-234b-45f4-a3d2-8bd51e094ab7",
+  "fields": {
+    "created_at": "2026-06-10T23:42:04.786Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "eb44c9ec-5985-498c-817a-e741f16851ca",
+  "fields": {
+    "created_at": "2026-06-10T18:55:13.754Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ece76080-4413-441b-8605-bf5ada5a1b28",
+  "fields": {
+    "created_at": "2026-06-10T22:45:11.690Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ed32f5de-46ce-43c3-b0a7-0d57d8912afe",
+  "fields": {
+    "created_at": "2026-06-10T23:42:37.193Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ed761268-00d1-4e7a-9887-c7189fa55a0e",
+  "fields": {
+    "created_at": "2026-06-10T23:06:30.940Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "eecdeeed-2c4a-4ac0-8adc-06df17bf2cf2",
+  "fields": {
+    "created_at": "2026-06-10T22:45:08.693Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "ef96cb4e-da0e-4cec-9f1f-6859dc5119ef",
+  "fields": {
+    "created_at": "2026-06-10T22:12:28.290Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f1012abf-9a09-4bc6-a63a-5f94dd97e981",
+  "fields": {
+    "created_at": "2026-06-11T03:57:52.105Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f15d37c6-75d1-48d9-b5cb-708bb95cbf3e",
+  "fields": {
+    "created_at": "2026-06-10T23:40:13.691Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f1f7c28a-0d09-4d88-beeb-d820d33c287d",
+  "fields": {
+    "created_at": "2026-06-10T23:42:34.227Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f4415c43-e021-41c1-a962-b7702e2a01fb",
+  "fields": {
+    "created_at": "2026-06-10T22:26:40.719Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f4ab2f02-fa97-4962-863d-508c74c78b97",
+  "fields": {
+    "created_at": "2026-06-09T22:06:47.982Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f4af58bd-a00b-441a-9421-02d71e33ed5e",
+  "fields": {
+    "created_at": "2026-06-10T23:42:33.445Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f52df1b9-18b3-4dad-98bd-fc3776ddd24a",
+  "fields": {
+    "created_at": "2026-06-10T23:40:04.256Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f764f552-f425-4d3e-801c-8faf04db81c4",
+  "fields": {
+    "created_at": "2026-06-10T23:42:36.291Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "f90f6e2c-5ca4-4430-b0d6-a3bfd8ad5d11",
+  "fields": {
+    "created_at": "2026-06-10T23:42:19.305Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "fa7e852a-270a-4686-a73b-9f29456034a3",
+  "fields": {
+    "created_at": "2026-06-09T20:23:09.797Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "fa8c55d2-6ad0-4914-a71a-f23ed0241b11",
+  "fields": {
+    "created_at": "2026-06-10T22:50:13.561Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "faa23c8a-ad1a-4e2d-a9ae-247d94c38102",
+  "fields": {
+    "created_at": "2026-06-11T03:52:40.715Z"
+  }
+},
+{
+  "model": "chatbot.chatbotsession",
+  "pk": "fbdaca61-5051-43cc-a46c-10cd9958cca8",
+  "fields": {
+    "created_at": "2026-06-10T23:03:46.625Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 1,
+  "fields": {
+    "session": "4f6230a7-7c29-43f3-8c61-8435bf322514",
+    "role": "user",
+    "content": "hola",
+    "created_at": "2026-06-09T20:08:17.168Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 2,
+  "fields": {
+    "session": "4f6230a7-7c29-43f3-8c61-8435bf322514",
+    "role": "user",
+    "content": "hola",
+    "created_at": "2026-06-09T20:16:54.808Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 3,
+  "fields": {
+    "session": "693e57d4-6ef8-4b0a-bddb-ec2f208c53ae",
+    "role": "user",
+    "content": "hola",
+    "created_at": "2026-06-09T20:23:18.291Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 4,
+  "fields": {
+    "session": "01767718-891e-4d60-ba62-7fedad4d7e61",
+    "role": "user",
+    "content": "hol",
+    "created_at": "2026-06-09T20:45:00.939Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 5,
+  "fields": {
+    "session": "aed25cfa-1f05-473e-88d7-0e17e98cf4e3",
+    "role": "user",
+    "content": "hola",
+    "created_at": "2026-06-09T20:46:07.632Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 6,
+  "fields": {
+    "session": "aed25cfa-1f05-473e-88d7-0e17e98cf4e3",
+    "role": "assistant",
+    "content": "íHola! ┐En quÚ puedo ayudarte hoy?",
+    "created_at": "2026-06-09T20:46:11.234Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 7,
+  "fields": {
+    "session": "aed25cfa-1f05-473e-88d7-0e17e98cf4e3",
+    "role": "user",
+    "content": "cuantos materiales tienes en tu base de datos",
+    "created_at": "2026-06-09T20:46:24.824Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 8,
+  "fields": {
+    "session": "aed25cfa-1f05-473e-88d7-0e17e98cf4e3",
+    "role": "assistant",
+    "content": "Hola.\n\nNo tengo una base de datos de materiales para compartir directamente. Soy un asistente especializado en ayudarte con productos de construcci¾n y herramientas disponibles en nuestro e-commerce.\n\n┐Te ayudo con algo mßs?",
+    "created_at": "2026-06-09T20:46:28.389Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 9,
+  "fields": {
+    "session": "aed25cfa-1f05-473e-88d7-0e17e98cf4e3",
+    "role": "user",
+    "content": "que prodcutos puedo encontrar en esta tienda?",
+    "created_at": "2026-06-09T20:46:57.119Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 10,
+  "fields": {
+    "session": "aed25cfa-1f05-473e-88d7-0e17e98cf4e3",
+    "role": "assistant",
+    "content": "Hola.\n\nEn nuestra tienda puedes encontrar los siguientes productos:\n\nCal Hidratada Loma Negra 25kg\nBloque de Hormig¾n 19x19x39 (Por unidad)\nPlaca de Yeso Durlock Estßndar 12.5mm\nYeso Manual Tuyango 40kg\n\n┐Hay algo especÝfico que estÚs buscando o necesitas mßs detalles de alguno de estos productos?",
+    "created_at": "2026-06-09T20:47:01.735Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 11,
+  "fields": {
+    "session": "897a2ded-8772-4d9d-9cbc-a6dcd40008c2",
+    "role": "user",
+    "content": "que productos vende la tienda?",
+    "created_at": "2026-06-09T23:29:52.493Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 12,
+  "fields": {
+    "session": "897a2ded-8772-4d9d-9cbc-a6dcd40008c2",
+    "role": "assistant",
+    "content": "Hola. En nuestra tienda vendemos los siguientes productos:\n\nCal Hidratada Loma Negra 25kg\nBloque de Hormig¾n 19x19x39 (Por unidad)\nPlaca de Yeso Durlock Estßndar 12.5mm\nYeso Manual Tuyango 40kg\n\n┐Te gustarÝa saber mßs sobre alguno de ellos o necesitas ayuda con algo mßs?",
+    "created_at": "2026-06-09T23:29:56.641Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 13,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "con que puedo pegar ceramicas en mi entrepiso",
+    "created_at": "2026-06-10T21:35:47.223Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 14,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. Para pegar cerßmicas en un entrepiso se utiliza un adhesivo especÝfico para cerßmicas, tambiÚn conocido como pegamento para cerßmicas o mortero adhesivo. Es importante elegir uno adecuado para el tipo de cerßmica y la superficie del entrepiso.\n\nActualmente no contamos con adhesivos para cerßmica en nuestro catßlogo.\n\n┐Hay algo mßs en lo que pueda ayudarte?",
+    "created_at": "2026-06-10T21:35:55.883Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 15,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "que tipo de adhesivos hay?",
+    "created_at": "2026-06-10T21:36:16.532Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 16,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "y cuales tienen en esta tienda",
+    "created_at": "2026-06-10T21:36:35.879Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 17,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. Para pegar cerßmicas existen varios tipos de adhesivos, cada uno adecuado para diferentes condiciones y tipos de material.\n\nLos mßs comunes son:\n\n  Adhesivos cementicios: Son los mßs tradicionales y versßtiles. Se mezclan con agua y son ideales para la mayorÝa de las cerßmicas en pisos y paredes. Dentro de estos, hay variantes para interiores, exteriores, de fraguado rßpido o para grandes formatos.\n\n  Adhesivos de resina epoxi: Son bicomponentes y ofrecen una muy alta resistencia al agua y a los quÝmicos, asÝ como una gran adherencia. Son ideales para ambientes h·medos o industriales, o para cerßmicas que requieren una fijaci¾n excepcional.\n\n  Adhesivos de dispersi¾n (o listos para usar): Vienen ya mezclados y son fßciles de aplicar. Son adecuados para cerßmicas de peque±o y mediano formato en interiores, generalmente en paredes.\n\nActualmente, no contamos con ninguno de estos adhesivos para cerßmica en nuestro catßlogo.\n\n┐Te ayudo con algo mßs?",
+    "created_at": "2026-06-10T21:36:40.774Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 18,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "que productos de la marca weber tienen",
+    "created_at": "2026-06-10T21:42:21.480Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 19,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. De la marca Weber tenemos los siguientes productos:\n\nPegamento Impermeable Weber Col 25kg\nPrecio: 8700.00\nDescripci¾n: Mezcla adhesiva impermeable para la colocaci¾n de cerßmicas en interiores y exteriores.\n\nAdhesivo Weber Porcelanato Flex 25kg\nPrecio: 17500.00\nDescripci¾n: Pegamento flexible de alta tecnologÝa para porcelanatos de gran formato.\n\nPastina Weber Classic 2kg (Gris)\nPrecio: 2900.00\nDescripci¾n: Mezcla cementicia para relleno de juntas de 1 a 4 mm en revestimientos.\n\n┐Te ayudo con algo mßs?",
+    "created_at": "2026-06-10T21:42:26.561Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 20,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "y el Adhesivo Weber Porcelanato Flex 25kg par que me serviria",
+    "created_at": "2026-06-10T21:42:57.850Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 21,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. El Adhesivo Weber Porcelanato Flex 25kg te servirÝa para pegar porcelanatos, especialmente aquellos de gran formato. Es un pegamento flexible de alta tecnologÝa dise±ado para asegurar una buena adherencia en este tipo de revestimientos.\n\n┐Te ayudo con algo mßs?",
+    "created_at": "2026-06-10T21:43:02.838Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 22,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "Y cual es la diferencia entre pegar porcelanato y ceramicas",
+    "created_at": "2026-06-10T21:43:47.155Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 23,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. La principal diferencia entre pegar porcelanato y cerßmicas radica en las caracterÝsticas de cada material y, por lo tanto, en el tipo de adhesivo que se recomienda usar.\n\nLas cerßmicas son mßs porosas y absorben mßs agua. Esto significa que un adhesivo cementicio estßndar suele ser suficiente para pegarlas, ya que la cerßmica absorbe parte del agua del pegamento, ayudando a la fijaci¾n.\n\nLos porcelanatos, en cambio, son mucho menos porosos, mßs densos y tienen una absorci¾n de agua muy baja. Debido a esto, necesitan un adhesivo mßs potente y flexible que pueda adherirse bien a una superficie con poca absorci¾n. Ademßs, los porcelanatos suelen ser de mayor tama±o y mßs pesados, lo que requiere un pegamento con mayor capacidad de agarre y flexibilidad para soportar movimientos y evitar desprendimientos.\n\nPor eso, el Adhesivo Weber Porcelanato Flex 25kg, por ejemplo, estß dise±ado especÝficamente para porcelanatos, ofreciendo la flexibilidad y adherencia necesarias para este tipo de material, especialmente en grandes formatos.\n\n┐Te ayudo con algo mßs?",
+    "created_at": "2026-06-10T21:43:52.276Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 24,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "y que tiene que ver con lo que te pregunte, ESTUPIDO",
+    "created_at": "2026-06-10T21:45:26.583Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 25,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. Entiendo tu pregunta. La explicaci¾n sobre la diferencia entre pegar porcelanato y cerßmicas se relaciona con tu consulta inicial sobre quÚ tipo de adhesivo usar para cerßmicas en tu entrepiso, y tambiÚn con los productos Weber que mencionamos. Al entender las propiedades de cada material, puedes elegir el adhesivo correcto para tu proyecto, como el Adhesivo Weber Porcelanato Flex para porcelanatos, que es distinto al que se usarÝa para cerßmicas comunes.\n\n┐Hay algo mßs en lo que pueda ayudarte con tus materiales de construcci¾n?",
+    "created_at": "2026-06-10T21:45:33.284Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 26,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "hace envios a domicilio?",
+    "created_at": "2026-06-10T21:54:34.199Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 27,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. Soy un asistente especializado en materiales de construcci¾n y herramientas y no tengo informaci¾n sobre los servicios de envÝo a domicilio. Te recomiendo consultar directamente con la tienda para conocer sus polÝticas de entrega.\n\n┐Te ayudo con algo mßs sobre productos o proyectos?",
+    "created_at": "2026-06-10T21:54:37.052Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 28,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "user",
+    "content": "hace envios a domicilio de materiales de construccion en lo que estas especializado??",
+    "created_at": "2026-06-10T21:55:33.568Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 29,
+  "fields": {
+    "session": "799437d6-c0eb-4b54-a940-f0ce05f33f4a",
+    "role": "assistant",
+    "content": "Hola. Soy un asistente especializado en materiales de construcci¾n y herramientas. Mi funci¾n es brindarte informaci¾n sobre los productos y ayudarte con proyectos. No tengo capacidad para gestionar envÝos a domicilio ni informaci¾n sobre la logÝstica de la tienda.\n\nPara saber si se realizan envÝos a domicilio de materiales de construcci¾n, te sugiero que te pongas en contacto directamente con la tienda.\n\n┐Hay algo mßs en lo que pueda ayudarte respecto a los productos o tus proyectos?",
+    "created_at": "2026-06-10T21:55:37.581Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 30,
+  "fields": {
+    "session": "305c48a5-a226-49a9-84fe-44e95c35a761",
+    "role": "user",
+    "content": "hola, que tipo de cable necesito para alimentar un foco de 25w",
+    "created_at": "2026-06-10T22:46:04.076Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 31,
+  "fields": {
+    "session": "305c48a5-a226-49a9-84fe-44e95c35a761",
+    "role": "assistant",
+    "content": "Hola. Para un foco de 25W necesitas un cable elÚctrico de uso domiciliario. Un cable bipolar de 1,5 mm▓ de secci¾n es mßs que suficiente, ya que 25W es una carga muy baja. Este tipo de cable se utiliza com·nmente para la instalaci¾n de iluminaci¾n en hogares.\n\nActualmente no contamos con cables elÚctricos en nuestro catßlogo.\n\n┐Te ayudo con algo mßs?",
+    "created_at": "2026-06-10T22:46:08.070Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 32,
+  "fields": {
+    "session": "305c48a5-a226-49a9-84fe-44e95c35a761",
+    "role": "user",
+    "content": "y que es un bastidor",
+    "created_at": "2026-06-10T22:46:31.650Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 33,
+  "fields": {
+    "session": "305c48a5-a226-49a9-84fe-44e95c35a761",
+    "role": "assistant",
+    "content": "Hola. Un bastidor es una estructura rÝgida, generalmente de madera o metal, que sirve de soporte o armaz¾n para algo.\n\nEn construcci¾n y decoraci¾n, puedes encontrar bastidores para:\n\n Soportar placas de yeso o madera en tabiques y cielorrasos.\n Armar marcos para puertas o ventanas.\n Crear estructuras para muebles o elementos decorativos.\n Montar lienzos para pintura.\n\nEsencialmente, es la base o el esqueleto sobre el cual se construye o se fija otro material.\n\n┐Te gustarÝa saber si tenemos alg·n material relacionado con bastidores en nuestro catßlogo?",
+    "created_at": "2026-06-10T22:46:39.600Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 34,
+  "fields": {
+    "session": "9d814aac-a0fb-43d0-9ce3-b0e22470e5dc",
+    "role": "user",
+    "content": "hola",
+    "created_at": "2026-06-10T22:50:21.206Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 35,
+  "fields": {
+    "session": "9d814aac-a0fb-43d0-9ce3-b0e22470e5dc",
+    "role": "assistant",
+    "content": "íHola! ┐En quÚ puedo ayudarte hoy?",
+    "created_at": "2026-06-10T22:50:24.569Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 36,
+  "fields": {
+    "session": "9d814aac-a0fb-43d0-9ce3-b0e22470e5dc",
+    "role": "user",
+    "content": "cuantos kilos de cemento en promedio se necesitan para realizar 5 mts cuadrados de piso",
+    "created_at": "2026-06-10T22:51:05.940Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 37,
+  "fields": {
+    "session": "9d814aac-a0fb-43d0-9ce3-b0e22470e5dc",
+    "role": "assistant",
+    "content": "íHola! Para calcular la cantidad de cemento para 5 metros cuadrados de piso, necesito saber el espesor que le darßs. AsumirÚ un espesor com·n de 10 centÝmetros para darte una estimaci¾n.\n\nMateriales necesarios para un piso de 5 m▓ con 10 cm de espesor (0.5 m│ de hormig¾n):\n\nProductos que sÝ vendemos:\n- 4 unidades de Cemento Portland Normal Loma Negra 50kg (para un total de 200kg)\n- O 4 unidades de Cemento Portland Avellaneda 50kg (para un total de 200kg)\n\nProductos que no vendemos (cantidades aproximadas):\n- 0.25 m│ de arena\n- 0.4 m│ de grava\n- Agua (cantidad necesaria para la mezcla)\n\nPresupuesto estimado (solo cemento):\n- Si eliges Cemento Portland Normal Loma Negra 50kg: 4 unidades x 12500.00 = 50000.00\n- Si eliges Cemento Portland Avellaneda 50kg: 4 unidades x 12300.00 = 49200.00\n\nGuÝa paso a paso para hacer el piso:\n\n1. Preparaci¾n del Terreno: Limpia y nivela bien el ßrea donde harßs el piso. Si es necesario, compacta el suelo.\n\n2. Colocaci¾n de Barrera (Opcional): Puedes colocar un film de polietileno sobre el suelo para evitar la humedad ascendente.\n\n3. Preparaci¾n de la Mezcla: En una hormigonera o en una superficie limpia, mezcla el cemento con la arena y la grava en seco. Luego, agrega el agua poco a poco hasta obtener una mezcla homogÚnea y trabajable, sin que sea demasiado lÝquida. Una proporci¾n com·n para pisos es 1 parte de cemento, 2 de arena y 3 de grava.\n\n4. Vertido y Nivelaci¾n: Vierte la mezcla de hormig¾n sobre el ßrea preparada. Usa una regla o tabl¾n largo para nivelar la superficie, retirando el exceso de material y rellenando los huecos.\n\n5. Fratasado y Acabado: Una vez que el hormig¾n empieza a endurecer, puedes usar una llana o fratas para alisar la superficie y darle el acabado deseado.\n\n6. Curado: Durante los primeros dÝas, es importante mantener el hormig¾n h·medo (rocißndolo con agua) para que frag³e correctamente y alcance su mßxima resistencia.\n\n┐Te gustarÝa que calculemos los materiales para otro espesor, o tienes alguna otra pregunta?",
+    "created_at": "2026-06-10T22:51:17.327Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 38,
+  "fields": {
+    "session": "fbdaca61-5051-43cc-a46c-10cd9958cca8",
+    "role": "user",
+    "content": "hola",
+    "created_at": "2026-06-10T23:03:56.563Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 39,
+  "fields": {
+    "session": "fbdaca61-5051-43cc-a46c-10cd9958cca8",
+    "role": "assistant",
+    "content": "íHola! ┐En quÚ puedo ayudarte hoy?",
+    "created_at": "2026-06-10T23:04:02.250Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 40,
+  "fields": {
+    "session": "0ec1a49c-dd5d-4a75-b150-8c3b95770d74",
+    "role": "user",
+    "content": "hola",
+    "created_at": "2026-06-10T23:04:06.101Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 41,
+  "fields": {
+    "session": "0ec1a49c-dd5d-4a75-b150-8c3b95770d74",
+    "role": "assistant",
+    "content": "íHola! ┐En quÚ puedo ayudarte hoy?",
+    "created_at": "2026-06-10T23:04:10.201Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 42,
+  "fields": {
+    "session": "0ec1a49c-dd5d-4a75-b150-8c3b95770d74",
+    "role": "user",
+    "content": "no me ayudes",
+    "created_at": "2026-06-10T23:04:16.322Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 43,
+  "fields": {
+    "session": "0ec1a49c-dd5d-4a75-b150-8c3b95770d74",
+    "role": "assistant",
+    "content": "Entendido. Si cambias de opini¾n o necesitas algo relacionado con materiales de construcci¾n o herramientas, estarÚ aquÝ para ayudarte.",
+    "created_at": "2026-06-10T23:04:20.133Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 44,
+  "fields": {
+    "session": "0ec1a49c-dd5d-4a75-b150-8c3b95770d74",
+    "role": "user",
+    "content": "cuantos plafones de 25w necesito para iluminar una habitacion de 3x4",
+    "created_at": "2026-06-10T23:05:07.933Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 45,
+  "fields": {
+    "session": "0ec1a49c-dd5d-4a75-b150-8c3b95770d74",
+    "role": "assistant",
+    "content": "íHola! Para calcular la cantidad de plafones que podrÝas necesitar, se considera la superficie de la habitaci¾n y la cantidad de l·menes que emite cada plaf¾n.\n\nUna habitaci¾n de 3x4 metros tiene una superficie de 12 metros cuadrados.\n\nLa cantidad de luz recomendada para una iluminaci¾n general en una habitaci¾n suele ser de entre 100 y 200 l·menes por metro cuadrado, dependiendo del uso especÝfico y de la luminosidad deseada.\n\nUn plaf¾n de 25W, si es de tecnologÝa LED, suele emitir entre 2000 y 2500 l·menes aproximadamente.\n\nSi tomamos un promedio de 150 l·menes por metro cuadrado para una iluminaci¾n confortable:\nNecesitarÝas 12 metros cuadrados x 150 l·menes/metro cuadrado = 1800 l·menes en total.\n\nCon un plaf¾n de 25W que emita alrededor de 2000 a 2500 l·menes, podrÝas cubrir la necesidad de iluminaci¾n general para esa habitaci¾n. Si deseas una luz mßs intensa o para ßreas de trabajo especÝficas, podrÝas considerar dos plafones o uno de mayor potencia.\n\nEs importante mencionar que actualmente no contamos con plafones en nuestro catßlogo de productos.\n\n┐Te ayudo con algo mßs?",
+    "created_at": "2026-06-10T23:05:55.401Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 46,
+  "fields": {
+    "session": "c75f9419-7236-4f68-a3c3-ff3a258ce599",
+    "role": "user",
+    "content": "Que odna",
+    "created_at": "2026-06-11T03:49:15.463Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 47,
+  "fields": {
+    "session": "c75f9419-7236-4f68-a3c3-ff3a258ce599",
+    "role": "assistant",
+    "content": "Hola, ┐en quÚ puedo ayudarte hoy con tus proyectos de construcci¾n o herramientas?",
+    "created_at": "2026-06-11T03:49:20.365Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 48,
+  "fields": {
+    "session": "756c5e12-52e0-4f93-81fa-bc2bcac55d9c",
+    "role": "user",
+    "content": "tenes disponible algun hierro?",
+    "created_at": "2026-06-11T03:50:01.968Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 49,
+  "fields": {
+    "session": "756c5e12-52e0-4f93-81fa-bc2bcac55d9c",
+    "role": "assistant",
+    "content": "Hola.\n\nEn este momento no disponemos de hierro en nuestro catßlogo de productos.\n\n┐Hay algo mßs en lo que pueda ayudarte?",
+    "created_at": "2026-06-11T03:50:07.743Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 50,
+  "fields": {
+    "session": "756c5e12-52e0-4f93-81fa-bc2bcac55d9c",
+    "role": "user",
+    "content": "como que no",
+    "created_at": "2026-06-11T03:50:40.227Z"
+  }
+},
+{
+  "model": "chatbot.chatbotmessage",
+  "pk": 51,
+  "fields": {
+    "session": "756c5e12-52e0-4f93-81fa-bc2bcac55d9c",
+    "role": "assistant",
+    "content": "Hola.\n\nConfirmamos que actualmente no contamos con hierro en nuestro catßlogo de productos.\n\n┐Puedo asistirte con algo mßs?",
+    "created_at": "2026-06-11T03:50:44.891Z"
+  }
+}
+]
