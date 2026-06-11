@@ -3,7 +3,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Category, Product
 from .serializers import CategorySerializer, ProductSerializer
-from users.permissions import HasDynamicPermission
+from app.api.users.permissions import HasDynamicPermission
 
 class CategoryListView(generics.ListAPIView):
     """

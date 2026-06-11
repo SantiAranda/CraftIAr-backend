@@ -33,7 +33,7 @@ class RAGQueryService:
         if db_settings["ENGINE"] == "django.db.backends.sqlite3":
             # Si usa SQLite (fallback de desarrollo), buscamos usando el ORM de Django tradicional
             from django.db.models import Q
-            from catalog.models import Product
+            from app.api.catalog.models import Product
             
             words = user_text.split()
             query = Q()

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.db import transaction
 from .models import Subscription, Order, OrderItem
-from catalog.models import Product
+from app.api.catalog.models import Product
 from .tasks import send_order_confirmation_email
 
 class SubscriptionSerializer(serializers.ModelSerializer):

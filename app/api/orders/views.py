@@ -6,8 +6,8 @@ from rest_framework.permissions import IsAuthenticated
 from django.utils import timezone
 from .models import Order, Subscription, OrderItem
 from .serializers import OrderSerializer, OrderCreateSerializer, SubscriptionSerializer
-from catalog.models import Product
-from users.permissions import HasDynamicPermission, has_custom_permission
+from app.api.catalog.models import Product
+from app.api.users.permissions import HasDynamicPermission, has_custom_permission
 from .tasks import send_order_status_change_email
 
 class OrderViewSet(viewsets.ModelViewSet):

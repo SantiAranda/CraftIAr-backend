@@ -112,12 +112,12 @@ class HasDynamicPermission(permissions.BasePermission):
 
         # Si el alcance es 'propios', debemos comprobar la propiedad del objeto
         # Para Product (de la app catalog):
-        from catalog.models import Product
+        from app.api.catalog.models import Product
         if isinstance(obj, Product):
             return obj.created_by == request.user
 
         # Para Order (de la app orders):
-        from orders.models import Order
+        from app.api.orders.models import Order
         if isinstance(obj, Order):
             # El comprador ve su propio pedido
             if obj.user == request.user:

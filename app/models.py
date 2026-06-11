@@ -1,3 +1,3 @@
-from app.api.products.product_model import ProductModel
+from app.api.catalog.models import Product
 
-__all__ = ["ProductModel"]
+__all__ = ["Product"]

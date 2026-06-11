@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/6.0/howto/deployment/asgi/
 import os
 
 from django.core.asgi import get_asgi_application
-<<<<<<< HEAD
 from channels.routing import ProtocolTypeRouter
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
@@ -22,9 +21,3 @@ application = ProtocolTypeRouter(
         "http": django_asgi_app,
     }
 )
-=======
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
-
-application = get_asgi_application()
->>>>>>> origin/feature/integracion-rag

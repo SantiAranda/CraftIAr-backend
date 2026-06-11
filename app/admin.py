@@ -1,10 +1,10 @@
 from django.contrib import admin, messages
 
-from .models import ProductModel
+from .models import Product
 from .tasks import update_product_embeddings
 
 
-@admin.register(ProductModel)
+@admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         "id",
@@ -23,7 +23,7 @@ class ProductAdmin(admin.ModelAdmin):
     actions = ["reindex_embeddings", "reset_embeddings"]
 
     @admin.action(description="Reindex embeddings for selected products")
-    def reindex_embeddings(self, re.venvquest, queryset):
+    def reindex_embeddings(self, request, queryset):
         try:
             product_ids = list(queryset.values_list("id", flat=True))
             update_product_embeddings.delay(product_ids)

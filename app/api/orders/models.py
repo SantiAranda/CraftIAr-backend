@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from catalog.models import Product
+from app.api.catalog.models import Product
 
 class Subscription(models.Model):
     """

@@ -2,7 +2,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 from .models import Profile, UserProfileAssignment, PermissionAuditLog
-from orders.models import Subscription
+from app.api.orders.models import Subscription
 from .tasks import send_welcome_email
 
 @receiver(post_save, sender=User)

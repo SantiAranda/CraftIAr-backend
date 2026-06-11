@@ -6,8 +6,8 @@ from rest_framework.test import APITestCase
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
-from users.models import Profile, PermissionAtom, UserProfileAssignment, PermissionAuditLog
-from users.permissions import has_custom_permission
+from app.api.users.models import Profile, PermissionAtom, UserProfileAssignment, PermissionAuditLog
+from app.api.users.permissions import has_custom_permission
 
 class AuthTestCase(APITestCase):
 

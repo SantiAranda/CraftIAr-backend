@@ -1,9 +1,9 @@
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-from users.models import PermissionAtom, Profile, ProfilePermission
-from catalog.models import Category, Product
-from orders.models import Subscription
+from app.api.users.models import PermissionAtom, Profile, ProfilePermission
+from app.api.catalog.models import Category, Product
+from app.api.orders.models import Subscription
 
 class Command(BaseCommand):
     help = 'Semilla inicial de permisos, perfiles, categorías y catálogo de productos demostrativos.'
